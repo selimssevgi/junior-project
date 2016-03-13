@@ -11,3 +11,8 @@
 /log/*
 !/log/.keep
 /tmp
+
+# from railstutorials
+# To prevent conflicts between Spring and Git when using Guard,
+# Ignore Spring files.
+# /spring/*.pid
