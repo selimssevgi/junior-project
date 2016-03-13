@@ -1,12 +1,23 @@
 Rails.application.routes.draw do
+  # first form
+  # root 'static_pages#home'
+  # get 'static_pages/help'
+  # get 'static_pages/about'
+  # get 'static_pages/contact'
 
-  root 'static_pages#home'
+  # second form
+  # now it can be used like:
+  # help_path -> '/help'
+  # help_url  -> 'http://www.example.com/help'
+  # url part sometimes required for http redirects!
+  
+  root             'static_pages#home'
+  get 'help'    => 'static_pages#help'
+  get 'about'   => 'static_pages#about'
+  get 'contact' => 'static_pages#contact'
+  
+  get 'signup'  => 'users#new'  
 
-  get 'static_pages/help'
-
-  get 'static_pages/about'
-
-  get 'static_pages/contact'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
