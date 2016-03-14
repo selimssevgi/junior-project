@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   # first form
   # root 'static_pages#home'
   # get 'static_pages/help'
@@ -11,14 +13,17 @@ Rails.application.routes.draw do
   # help_url  -> 'http://www.example.com/help'
   # url part sometimes required for http redirects!
   
-  root             'static_pages#home'
-  get 'help'    => 'static_pages#help'
-  get 'about'   => 'static_pages#about'
-  get 'contact' => 'static_pages#contact'
+  root                    'static_pages#home'
+  get    'help'        => 'static_pages#help'
+  get    'about'       => 'static_pages#about'
+  get    'contact'     => 'static_pages#contact'
   
-  get 'signup'  => 'users#new'  
+  get    'signup'      => 'users#new'  
   resources :users
 
+  get    'login'       => 'sessions#new'
+  post   'login'       => 'sessions#create'
+  delete 'logout'      => 'sessions#destroy'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
