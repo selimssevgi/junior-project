@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160315103658) do
+ActiveRecord::Schema.define(version: 20160319142703) do
+
+  create_table "movies", force: :cascade do |t|
+    t.string   "title",       limit: 255
+    t.integer  "year",        limit: 4
+    t.string   "released",    limit: 255
+    t.integer  "runtime",     limit: 4
+    t.text     "plot",        limit: 65535
+    t.string   "awards",      limit: 255
+    t.string   "poster",      limit: 255
+    t.integer  "metascore",   limit: 4
+    t.decimal  "imdb_rating",               precision: 3, scale: 1
+    t.integer  "imdb_votes",  limit: 4
+    t.string   "imdb_id",     limit: 255
+    t.datetime "created_at",                                        null: false
+    t.datetime "updated_at",                                        null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name",            limit: 255
