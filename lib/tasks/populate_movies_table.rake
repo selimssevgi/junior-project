@@ -42,9 +42,26 @@ def add_movie(params)
     movie.imdb_votes  = params["imdbVotes"].tr(',','')  # 1,2345 => 12345
     movie.imdb_id     = params["imdbID"]
     movie.rated_id    = add_rated(params["Rated"])
+
     if movie.save 
       puts "#{movie.title} added successfully!"
+      add_genre(params["Genre"], movie)
     end
+end
+
+def add_genre(genre, movie)
+  # genre is actually comma separated value
+  # for example: Crime, Drama
+  genre_arr = genre.split(',')
+  genre_arr.each do |genre|
+    genre.strip!
+    g = Genre.find_by(genre: genre)
+    if g.nil?
+      # this genre doesnt exist in my database, add it
+      g = Genre.create(genre: genre)
+    end
+    g.genremovies.create(movie: movie) 
+  end
 end
 
 def add_rated(rated)

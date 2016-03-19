@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160319161551) do
+ActiveRecord::Schema.define(version: 20160319210542) do
+
+  create_table "genremovies", force: :cascade do |t|
+    t.integer  "genre_id",   limit: 4
+    t.integer  "movie_id",   limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "genremovies", ["genre_id"], name: "index_genremovies_on_genre_id", using: :btree
+  add_index "genremovies", ["movie_id"], name: "index_genremovies_on_movie_id", using: :btree
+
+  create_table "genres", force: :cascade do |t|
+    t.string   "genre",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "movies", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -50,5 +66,7 @@ ActiveRecord::Schema.define(version: 20160319161551) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  add_foreign_key "genremovies", "genres"
+  add_foreign_key "genremovies", "movies"
   add_foreign_key "movies", "rateds"
 end
