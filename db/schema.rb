@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160319142703) do
+ActiveRecord::Schema.define(version: 20160319161551) do
 
   create_table "movies", force: :cascade do |t|
     t.string   "title",       limit: 255
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 20160319142703) do
     t.string   "imdb_id",     limit: 255
     t.datetime "created_at",                                        null: false
     t.datetime "updated_at",                                        null: false
+    t.integer  "rated_id",    limit: 4
+  end
+
+  add_index "movies", ["rated_id"], name: "index_movies_on_rated_id", using: :btree
+
+  create_table "rateds", force: :cascade do |t|
+    t.string   "rated",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,4 +50,5 @@ ActiveRecord::Schema.define(version: 20160319142703) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  add_foreign_key "movies", "rateds"
 end

@@ -41,10 +41,18 @@ def add_movie(params)
     movie.imdb_rating = params["imdbRating"]
     movie.imdb_votes  = params["imdbVotes"].tr(',','')  # 1,2345 => 12345
     movie.imdb_id     = params["imdbID"]
-
+    movie.rated_id    = add_rated(params["Rated"])
     if movie.save 
       puts "#{movie.title} added successfully!"
     end
+end
+
+def add_rated(rated)
+  @rated = Rated.find_by(rated: rated)
+  if @rated.nil?
+    @rated = Rated.create(rated: rated)
+  end
+  @rated.id
 end
 
 def query_omdb(movie, year)
