@@ -1,15 +1,9 @@
 <div class="movie-card">
-
   <div class="movie-container">
-
     <a href="#"><img src="<%= @movie.poster %>" alt="cover" class="cover" /></a>
-
     <div class="hero">
-
       <div class="details">
-
         <div class="title1"><%= @movie.title %> <span><%= @movie.rated.rated %></span></div>
-
         <div class="title2">
           <p>
           <%= @movie.released %> | <%= @movie.runtime %> min | 
@@ -46,7 +40,11 @@
       </div> <!-- end column1 -->
 
       <div class="column2">
-
+        <p>Director: 
+        <% @movie.directors.each do |director| %>
+          <span class="tag"><%= director.full_name %></span>
+        <% end %>
+        </p>
         <p><%= @movie.plot %></p>
         <!--
         <div class="avatars">

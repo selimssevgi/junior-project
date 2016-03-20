@@ -46,7 +46,23 @@ def add_movie(params)
     if movie.save 
       puts "#{movie.title} added successfully!"
       add_genre(params["Genre"], movie)
+      add_director(params["Director"], movie)
     end
+end
+
+def add_director(directors, movie)
+  # genre is actually comma separated value
+  # for example: Crime, Drama
+  directors_arr = directors.split(',')
+  directors_arr.each do |director|
+    director.strip! # delete leading and tailing white spaces
+    d = Director.find_by(full_name: director)
+    if d.nil?
+      # this director doesnt exist in my database, add it
+      d = Director.create(full_name: director)
+    end
+    d.directings.create(movie: movie) 
+  end
 end
 
 def add_genre(genre, movie)
