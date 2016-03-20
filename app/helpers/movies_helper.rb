@@ -7,4 +7,13 @@ module MoviesHelper
 
     return arr.join(', ')
   end
+
+  def join_countries(countries)
+    arr = []
+    countries.each do |country|
+      arr << country.country_name
+    end
+
+    return arr.join(', ')
+  end
 end

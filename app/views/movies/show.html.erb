@@ -3,10 +3,13 @@
     <a href="#"><img src="<%= @movie.poster %>" alt="cover" class="cover" /></a>
     <div class="hero">
       <div class="details">
-        <div class="title1"><%= @movie.title %> <span><%= @movie.rated.rated %></span></div>
+        <div class="title1">
+          <%= @movie.title %> <span><%= @movie.rated.rated %></span>
+        </div>
+
         <div class="title2">
           <p>
-          <%= @movie.released %> | <%= @movie.runtime %> min | 
+          <%= @movie.released %> | <%= @movie.runtime %> min | <%= join_countries(@movie.countries) %>
           </p>
         </div>    
 
@@ -59,6 +62,7 @@
           <span class="tag"><%= language.language %></span>
         <% end %>
         </p>
+
         <!--
         <div class="avatars">
           <a href="#" data-tooltip="Person 1" data-placement="top">

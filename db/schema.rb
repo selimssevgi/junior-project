@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160320133642) do
+ActiveRecord::Schema.define(version: 20160320135116) do
 
   create_table "actings", force: :cascade do |t|
     t.integer  "actor_id",   limit: 4
@@ -28,6 +28,22 @@ ActiveRecord::Schema.define(version: 20160320133642) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  create_table "countries", force: :cascade do |t|
+    t.string   "country_name", limit: 255
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  create_table "country_movies", force: :cascade do |t|
+    t.integer  "movie_id",   limit: 4
+    t.integer  "country_id", limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "country_movies", ["country_id"], name: "index_country_movies_on_country_id", using: :btree
+  add_index "country_movies", ["movie_id"], name: "index_country_movies_on_movie_id", using: :btree
 
   create_table "directings", force: :cascade do |t|
     t.integer  "director_id", limit: 4
@@ -116,6 +132,8 @@ ActiveRecord::Schema.define(version: 20160320133642) do
 
   add_foreign_key "actings", "actors"
   add_foreign_key "actings", "movies"
+  add_foreign_key "country_movies", "countries"
+  add_foreign_key "country_movies", "movies"
   add_foreign_key "directings", "directors"
   add_foreign_key "directings", "movies"
   add_foreign_key "genremovies", "genres"

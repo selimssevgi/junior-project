@@ -49,7 +49,20 @@ def add_movie(params)
       add_director(params["Director"], movie)
       add_actor(params["Actors"], movie)
       add_language(params["Language"], movie)
+      add_country(params["Country"], movie)
     end
+end
+
+def add_country(countries, movie)
+  countries_arr = countries.split(",")
+  countries_arr.each do |country|
+    country.strip!
+    c = Country.find_by(country_name: country)
+    if c.nil?
+      c = Country.create(country_name: country)
+    end
+    c.country_movies.create(movie: movie)
+  end
 end
 
 def add_language(languages, movie)
