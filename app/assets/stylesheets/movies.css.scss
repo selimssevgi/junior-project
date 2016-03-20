@@ -54,8 +54,8 @@ a:hover {
   position:absolute;
   overflow: hidden;
   top:0; left:0;
-  background:red;
-  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_bg.jpg");
+  background:#123;
+  // background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_bg.jpg");
   z-index:-1;
 
   transform: skewY(-2.2deg);
@@ -78,7 +78,8 @@ a:hover {
 
 .details {
 
-  padding: 190px 0 0 280px;
+  // padding: 190px 0 0 280px;
+  padding: 175px 0 0 280px;
 
 
   .title1 {

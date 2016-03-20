@@ -12,6 +12,12 @@ automatically be included as part of the application.css file included in the si
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+/*Bootstrap overrite*/
+.navbar-inverse {
+  background-color: #123;
+}
+
 /*
 Sass : is a strict superset of CSS itself; 
 that is, SCSS only adds features to CSS,
