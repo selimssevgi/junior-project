@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'watchlists/index'
+
   get 'sessions/new'
 
   # first form
@@ -25,5 +27,6 @@ Rails.application.routes.draw do
   post   'login'       => 'sessions#create'
   delete 'logout'      => 'sessions#destroy'
 
-  resources :movies, only: [:index, :show]
+  resources :movies,     only: [:index, :show]
+  resources :watchlists, only: [:index, :create, :destroy]
 end

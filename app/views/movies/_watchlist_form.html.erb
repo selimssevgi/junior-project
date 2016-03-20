@@ -1,0 +1,5 @@
+<% if current_user.movies_to_watch.include?(@movie) %>
+  <%= render 'remove_from_watchlist' %>
+<% else %>
+  <%= render 'add_to_watchlist' %>
+<% end %>

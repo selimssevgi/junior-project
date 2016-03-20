@@ -1,0 +1,4 @@
+<%= form_for(current_user.watchlist_items.build) do |f| %>
+  <div><%= hidden_field_tag :movie_id, @movie.id %></div>
+  <%= f.submit "Add to Watchlist", class: "btn btn-primary" %>
+<% end %>

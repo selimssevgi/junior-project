@@ -17,4 +17,7 @@ class Movie < ActiveRecord::Base
 
   has_many   :writings
   has_many   :writers, through: :writings
+
+  has_many   :watchlists
+  has_many   :users, through: :watchlists
 end

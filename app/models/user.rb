@@ -1,4 +1,9 @@
 class User < ActiveRecord::Base
+  has_many   :watchlist_items, class_name:  "Watchlist",
+                               foreign_key: "user_id",
+                               dependent:   :destroy
+  has_many   :movies_to_watch, through: :watchlist_items, source: :movie
+
   attr_accessor :remember_token
   before_save { email.downcase! }
 
@@ -45,4 +50,6 @@ class User < ActiveRecord::Base
   def forget
     update_attribute(:remember_digest, nil)
   end
+
+
 end
