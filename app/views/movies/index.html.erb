@@ -1,0 +1,14 @@
+<div id="wrapper">
+  <div id="columns">
+
+    <% @movies.each do |movie| %>
+    <div class="pin">
+      <img src="<%= movie.poster %>" />
+      <p>
+      <%= truncate(movie.plot, length: 150) %>
+      <%= link_to "read more", movie %>
+      </p>
+    </div>
+    <% end %>
+  </div>
+</div>
