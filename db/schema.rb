@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160320135116) do
+ActiveRecord::Schema.define(version: 20160320145041) do
 
   create_table "actings", force: :cascade do |t|
     t.integer  "actor_id",   limit: 4
@@ -130,6 +130,22 @@ ActiveRecord::Schema.define(version: 20160320135116) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  create_table "writers", force: :cascade do |t|
+    t.string   "full_name",  limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "writings", force: :cascade do |t|
+    t.integer  "movie_id",   limit: 4
+    t.integer  "writer_id",  limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "writings", ["movie_id"], name: "index_writings_on_movie_id", using: :btree
+  add_index "writings", ["writer_id"], name: "index_writings_on_writer_id", using: :btree
+
   add_foreign_key "actings", "actors"
   add_foreign_key "actings", "movies"
   add_foreign_key "country_movies", "countries"
@@ -141,4 +157,6 @@ ActiveRecord::Schema.define(version: 20160320135116) do
   add_foreign_key "language_movies", "languages"
   add_foreign_key "language_movies", "movies"
   add_foreign_key "movies", "rateds"
+  add_foreign_key "writings", "movies"
+  add_foreign_key "writings", "writers"
 end

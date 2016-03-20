@@ -14,4 +14,7 @@ class Movie < ActiveRecord::Base
 
   has_many   :country_movies
   has_many   :countries, through: :country_movies 
+
+  has_many   :writings
+  has_many   :writers, through: :writings
 end

@@ -44,13 +44,29 @@ def add_movie(params)
     movie.rated_id    = add_rated(params["Rated"])
 
     if movie.save 
-      puts "#{movie.title} added successfully!"
+      # puts "#{movie.title} added successfully!"
       add_genre(params["Genre"], movie)
       add_director(params["Director"], movie)
       add_actor(params["Actors"], movie)
       add_language(params["Language"], movie)
       add_country(params["Country"], movie)
+      add_writer(params["Writer"], movie)
     end
+end
+
+def add_writer(writers, movie)
+  writers_arr = writers.split(",")
+  writers_arr.each do |writer|
+    puts writers_arr.inspect
+    writer_arr = writer.split("(")
+    full_name = writer_arr[0]
+    puts "fullname: #{full_name}"
+    w = Writer.find_by(full_name: full_name)
+    if w.nil?
+      w = Writer.create(full_name: full_name)
+    end
+    w.writings.create(movie: movie)
+  end
 end
 
 def add_country(countries, movie)
