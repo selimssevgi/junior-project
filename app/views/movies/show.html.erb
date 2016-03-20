@@ -53,6 +53,12 @@
         </p>
 
         <p><%= @movie.plot %></p>
+
+        <p>Languages: 
+        <% @movie.languages.each do |language| %>
+          <span class="tag"><%= language.language %></span>
+        <% end %>
+        </p>
         <!--
         <div class="avatars">
           <a href="#" data-tooltip="Person 1" data-placement="top">

@@ -48,7 +48,20 @@ def add_movie(params)
       add_genre(params["Genre"], movie)
       add_director(params["Director"], movie)
       add_actor(params["Actors"], movie)
+      add_language(params["Language"], movie)
     end
+end
+
+def add_language(languages, movie)
+  languages_arr = languages.split(",")
+  languages_arr.each do |language|
+    language.strip!
+    l = Language.find_by(language: language)
+    if l.nil?
+      l = Language.create(language: language)
+    end
+    l.language_movies.create(movie: movie)
+  end
 end
 
 def add_actor(actors, movie)

@@ -8,4 +8,7 @@ class Movie < ActiveRecord::Base
 
   has_many   :actings
   has_many   :actors, through: :actings
+
+  has_many   :language_movies
+  has_many   :languages, through: :language_movies 
 end

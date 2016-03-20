@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160320123240) do
+ActiveRecord::Schema.define(version: 20160320133642) do
 
   create_table "actings", force: :cascade do |t|
     t.integer  "actor_id",   limit: 4
@@ -61,6 +61,22 @@ ActiveRecord::Schema.define(version: 20160320123240) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "language_movies", force: :cascade do |t|
+    t.integer  "movie_id",    limit: 4
+    t.integer  "language_id", limit: 4
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  add_index "language_movies", ["language_id"], name: "index_language_movies_on_language_id", using: :btree
+  add_index "language_movies", ["movie_id"], name: "index_language_movies_on_movie_id", using: :btree
+
+  create_table "languages", force: :cascade do |t|
+    t.string   "language",   limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
   create_table "movies", force: :cascade do |t|
     t.string   "title",       limit: 255
     t.integer  "year",        limit: 4
@@ -104,5 +120,7 @@ ActiveRecord::Schema.define(version: 20160320123240) do
   add_foreign_key "directings", "movies"
   add_foreign_key "genremovies", "genres"
   add_foreign_key "genremovies", "movies"
+  add_foreign_key "language_movies", "languages"
+  add_foreign_key "language_movies", "movies"
   add_foreign_key "movies", "rateds"
 end
