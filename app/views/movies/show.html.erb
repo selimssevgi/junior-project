@@ -45,6 +45,13 @@
           <span class="tag"><%= director.full_name %></span>
         <% end %>
         </p>
+
+        <p>Stars: 
+        <% @movie.actors.each do |actor| %>
+          <span class="tag"><%= actor.full_name %></span>
+        <% end %>
+        </p>
+
         <p><%= @movie.plot %></p>
         <!--
         <div class="avatars">

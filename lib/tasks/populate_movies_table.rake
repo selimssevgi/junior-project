@@ -47,7 +47,21 @@ def add_movie(params)
       puts "#{movie.title} added successfully!"
       add_genre(params["Genre"], movie)
       add_director(params["Director"], movie)
+      add_actor(params["Actors"], movie)
     end
+end
+
+def add_actor(actors, movie)
+  actors_arr = actors.split(',')
+  actors_arr.each do |actor|
+    actor.strip! # delete leading and tailing white spaces
+    a = Actor.find_by(full_name: actor)
+    if a.nil?
+      # this actor doesnt exist in my database, add it
+      a = Actor.create(full_name: actor)
+    end
+    a.actings.create(movie: movie) 
+  end
 end
 
 def add_director(directors, movie)

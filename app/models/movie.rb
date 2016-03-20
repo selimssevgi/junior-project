@@ -5,4 +5,7 @@ class Movie < ActiveRecord::Base
 
   has_many   :directings
   has_many   :directors, through: :directings
+
+  has_many   :actings
+  has_many   :actors, through: :actings
 end
