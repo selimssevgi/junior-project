@@ -40,6 +40,9 @@
         <% @movie.genres.each do |genre| %>
           <span class="tag"><%= genre.genre %></span>
         <% end %>
+        <p>
+          <%= render 'watchlist_form' if logged_in? %> 
+        </p>
       </div> <!-- end column1 -->
 
       <div class="column2">
@@ -75,7 +78,6 @@
         <%= @movie.awards %>
         </p>
 
-      <%= render 'watchlist_form' if logged_in? %> 
         <!--
         <div class="avatars">
           <a href="#" data-tooltip="Person 1" data-placement="top">
