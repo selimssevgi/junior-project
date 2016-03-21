@@ -20,13 +20,14 @@ Rails.application.routes.draw do
   get    'contact'     => 'static_pages#contact'
   
   get    'signup'      => 'users#new'  
-  resources :users
+  resources :users 
+  #resources :users, except: [:new]
 
   get    'login'       => 'sessions#new'
   post   'login'       => 'sessions#create'
   delete 'logout'      => 'sessions#destroy'
 
   resources :movies,     only: [:index, :show]
-  resources :watchlists, only: [:index, :create, :destroy]
+  resources :watchlists, only: [:create, :destroy]
   get    'watchlist'   => 'watchlists#index'
 end

@@ -1,0 +1,13 @@
+
+    <div class="pin">
+      <img src="<%= movie.poster %>" />
+      <%= link_to truncate(movie.title, length: 35), movie %>
+      <hr/>
+      <%= movie.released %>
+      <hr/>
+      <p>
+      <%= truncate(movie.plot, length: 150) %>
+      <%= link_to "read more", movie %>
+      </p>
+      <hr/>
+    </div>

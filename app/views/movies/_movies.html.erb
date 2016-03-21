@@ -1,0 +1,8 @@
+<!-- <div id="wrapper"> -->
+  <div id="columns">
+    <% obj.each do |movie| %>
+      <%= render 'movies/movie_pin', movie: movie %>
+    <% end %>
+  </div>
+  <%= will_paginate obj %>
+<!-- </div> -->
