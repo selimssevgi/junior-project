@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'watchlists/index'
 
   get 'sessions/new'
 
@@ -29,4 +28,5 @@ Rails.application.routes.draw do
 
   resources :movies,     only: [:index, :show]
   resources :watchlists, only: [:index, :create, :destroy]
+  get    'watchlist'   => 'watchlists#index'
 end

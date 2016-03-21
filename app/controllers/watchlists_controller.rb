@@ -2,6 +2,7 @@ class WatchlistsController < ApplicationController
   before_action :logged_in_user, only: [:show, :create, :destroy]
 
   def index
+    @movies = current_user.movies_to_watch
   end
 
   def create
