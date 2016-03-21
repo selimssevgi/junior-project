@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   post   'login'       => 'sessions#create'
   delete 'logout'      => 'sessions#destroy'
 
-  resources :movies,     only: [:index, :show]
+  resources :movies    # only: [:index, :show]
   resources :watchlists, only: [:create, :destroy]
   get    'watchlist'   => 'watchlists#index'
 end
