@@ -2,7 +2,7 @@ class WatchlistsController < ApplicationController
   before_action :logged_in_user, only: [:index, :create, :destroy]
 
   def index
-    @movies = current_user.movies_to_watch
+    @movies = current_user.movies_to_watch.paginate(page: params[:page])
   end
 
   def create
