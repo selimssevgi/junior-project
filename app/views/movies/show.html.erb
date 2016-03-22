@@ -41,7 +41,7 @@
           <span class="tag"><%= genre.genre %></span>
         <% end %>
         <p>
-          <%= render 'watchlist_form' if logged_in? %> 
+          <%= render 'watchlist_form', movie:@movie if logged_in? %> 
         </p>
       </div> <!-- end column1 -->
 

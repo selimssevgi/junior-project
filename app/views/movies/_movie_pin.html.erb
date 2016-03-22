@@ -12,4 +12,5 @@
   <%= link_to "read more", movie %>
   </p>
   <hr/>
+  <%= render 'movies/watchlist_form', movie:movie if logged_in? %>
 </div>
