@@ -54,7 +54,6 @@ def add_movie(params)
     end
 end
 
-
 def add_writer(writers, movie)
   writers_arr = writers.split(",")
   writers_arr.each do |writer|
@@ -62,12 +61,11 @@ def add_writer(writers, movie)
     writer_arr = writer.split("(")
     full_name = writer_arr[0]
     puts "fullname: #{full_name}"
-    w = Person.find_by(full_name: full_name)
+    w = Writer.find_by(full_name: full_name)
     if w.nil?
-      w = Person.create(full_name: full_name)
+      w = Writer.create(full_name: full_name)
     end
-    # w.writings.create(movie: movie)
-    Cast.create(movie: movie, person: w, role_id: 2)
+    w.writings.create(movie: movie)
   end
 end
 
@@ -99,13 +97,12 @@ def add_actor(actors, movie)
   actors_arr = actors.split(',')
   actors_arr.each do |actor|
     actor.strip! # delete leading and tailing white spaces
-    a = Person.find_by(full_name: actor)
+    a = Actor.find_by(full_name: actor)
     if a.nil?
       # this actor doesnt exist in my database, add it
-      a = Person.create(full_name: actor)
+      a = Actor.create(full_name: actor)
     end
-    # a.actings.create(movie: movie) 
-    Cast.create(movie: movie, person: a, role_id: 3)
+    a.actings.create(movie: movie) 
   end
 end
 
@@ -115,13 +112,12 @@ def add_director(directors, movie)
   directors_arr = directors.split(',')
   directors_arr.each do |director|
     director.strip! # delete leading and tailing white spaces
-    d = Person.find_by(full_name: director)
+    d = Director.find_by(full_name: director)
     if d.nil?
       # this director doesnt exist in my database, add it
-      d = Person.create(full_name: director)
+      d = Director.create(full_name: director)
     end
-    # d.directings.create(movie: movie) 
-    Cast.create(movie: movie, person: d, role_id: 1)
+    d.directings.create(movie: movie) 
   end
 end
 

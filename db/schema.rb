@@ -11,23 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160320162639) do
+ActiveRecord::Schema.define(version: 20160321235544) do
 
-  create_table "actings", force: :cascade do |t|
-    t.integer  "actor_id",   limit: 4
+  create_table "casts", force: :cascade do |t|
     t.integer  "movie_id",   limit: 4
+    t.integer  "person_id",  limit: 4
+    t.integer  "role_id",    limit: 4
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
   end
 
-  add_index "actings", ["actor_id"], name: "index_actings_on_actor_id", using: :btree
-  add_index "actings", ["movie_id"], name: "index_actings_on_movie_id", using: :btree
-
-  create_table "actors", force: :cascade do |t|
-    t.string   "full_name",  limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
+  add_index "casts", ["movie_id"], name: "index_casts_on_movie_id", using: :btree
+  add_index "casts", ["person_id"], name: "index_casts_on_person_id", using: :btree
+  add_index "casts", ["role_id"], name: "index_casts_on_role_id", using: :btree
 
   create_table "countries", force: :cascade do |t|
     t.string   "country_name", limit: 255
@@ -44,22 +40,6 @@ ActiveRecord::Schema.define(version: 20160320162639) do
 
   add_index "country_movies", ["country_id"], name: "index_country_movies_on_country_id", using: :btree
   add_index "country_movies", ["movie_id"], name: "index_country_movies_on_movie_id", using: :btree
-
-  create_table "directings", force: :cascade do |t|
-    t.integer  "director_id", limit: 4
-    t.integer  "movie_id",    limit: 4
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
-  end
-
-  add_index "directings", ["director_id"], name: "index_directings_on_director_id", using: :btree
-  add_index "directings", ["movie_id"], name: "index_directings_on_movie_id", using: :btree
-
-  create_table "directors", force: :cascade do |t|
-    t.string   "full_name",  limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
 
   create_table "genremovies", force: :cascade do |t|
     t.integer  "genre_id",   limit: 4
@@ -112,8 +92,20 @@ ActiveRecord::Schema.define(version: 20160320162639) do
 
   add_index "movies", ["rated_id"], name: "index_movies_on_rated_id", using: :btree
 
+  create_table "people", force: :cascade do |t|
+    t.string   "full_name",  limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
   create_table "rateds", force: :cascade do |t|
     t.string   "rated",      limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string   "role_type",  limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
@@ -140,28 +132,11 @@ ActiveRecord::Schema.define(version: 20160320162639) do
   add_index "watchlists", ["movie_id"], name: "index_watchlists_on_movie_id", using: :btree
   add_index "watchlists", ["user_id"], name: "index_watchlists_on_user_id", using: :btree
 
-  create_table "writers", force: :cascade do |t|
-    t.string   "full_name",  limit: 255
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  create_table "writings", force: :cascade do |t|
-    t.integer  "movie_id",   limit: 4
-    t.integer  "writer_id",  limit: 4
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-  end
-
-  add_index "writings", ["movie_id"], name: "index_writings_on_movie_id", using: :btree
-  add_index "writings", ["writer_id"], name: "index_writings_on_writer_id", using: :btree
-
-  add_foreign_key "actings", "actors"
-  add_foreign_key "actings", "movies"
+  add_foreign_key "casts", "movies"
+  add_foreign_key "casts", "people"
+  add_foreign_key "casts", "roles"
   add_foreign_key "country_movies", "countries"
   add_foreign_key "country_movies", "movies"
-  add_foreign_key "directings", "directors"
-  add_foreign_key "directings", "movies"
   add_foreign_key "genremovies", "genres"
   add_foreign_key "genremovies", "movies"
   add_foreign_key "language_movies", "languages"
@@ -169,6 +144,4 @@ ActiveRecord::Schema.define(version: 20160320162639) do
   add_foreign_key "movies", "rateds"
   add_foreign_key "watchlists", "movies"
   add_foreign_key "watchlists", "users"
-  add_foreign_key "writings", "movies"
-  add_foreign_key "writings", "writers"
 end

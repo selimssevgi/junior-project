@@ -6,18 +6,23 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #
-User.create!(name:  "Example User",
-             email: "example@railstutorial.org",
-             password:              "foobar",
-             password_confirmation: "foobar",
-             admin: true)
+# User.create!(name:  "Example User",
+#              email: "example@railstutorial.org",
+#              password:              "foobar",
+#              password_confirmation: "foobar",
+#              admin: true)
+#
+# 99.times do |n|
+#   name = Faker::Name.name
+#   email = "example-#{n+1}@example.com"
+#   password = "password"
+#   User.create!(name:  name,
+#                email: email,
+#                password:              password,
+#                password_confirmation: password)
+# end
 
-99.times do |n|
-  name = Faker::Name.name
-  email = "example-#{n+1}@example.com"
-  password = "password"
-  User.create!(name:  name,
-               email: email,
-               password:              password,
-               password_confirmation: password)
-end
+Role.create(role_type: "Director")
+Role.create(role_type: "Writer")
+Role.create(role_type: "Actor")
+
