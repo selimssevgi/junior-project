@@ -46,25 +46,25 @@
       </div> <!-- end column1 -->
 
       <div class="column2">
-        <p>Director: 
+        <p><%= "Director".pluralize(@movie.directors.count) %>: 
         <% @movie.directors.each do |director| %>
           <span class="tag"><%= director.full_name %></span>
         <% end %>
         </p>
 
-        <p>Writer: 
+        <p><%= "Writer".pluralize(@movie.writers.count) %>: 
         <% @movie.writers.each do |writer| %>
           <span class="tag"><%= writer.full_name %></span>
         <% end %>
         </p>
 
-        <p>Stars: 
+        <p><%= "Star".pluralize(@movie.actors.count) %>: 
         <% @movie.actors.each do |actor| %>
           <span class="tag"><%= actor.full_name %></span>
         <% end %>
         </p>
 
-        <p>Languages: 
+        <p><%= "Language".pluralize(@movie.languages.count) %>: 
         <% @movie.languages.each do |language| %>
           <span class="tag"><%= language.language %></span>
         <% end %>

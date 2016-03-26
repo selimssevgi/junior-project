@@ -1,7 +1,8 @@
 # Ara Proje
 
 # To-Dos
-* Pluralize director/actor/writers on movie show page
+X Pluralize director/actor/writers on movie show page
+* Put a back link in movie show page
 * Fix movie/show title. long movie titles doesnt fit!!
 * Remove users index page
 * user can just view his own page, route to profile
