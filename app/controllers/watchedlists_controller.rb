@@ -6,12 +6,21 @@ class WatchedlistsController < ApplicationController
   end
 
   def create
+    @movie = Movie.find(params[:movie_id])
     current_user.watchedlist_items.create(movie_id: params[:movie_id])
-    redirect_to request.referrer || root_url
+    respond_to do |format|
+      format.html { redirect_to request.referrer || root_url }
+      format.js
+    end
   end
 
   def destroy
-    Watchedlist.find(params[:id]).destroy
-    redirect_to request.referrer || root_url
+    watchedlist_item = Watchedlist.find(params[:id])
+    @movie = watchedlist_item.movie
+    watchedlist_item.destroy
+    respond_to do |format|
+      format.html { redirect_to request.referrer || root_url }
+      format.js
+    end
   end
 end

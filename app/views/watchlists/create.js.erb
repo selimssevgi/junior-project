@@ -1,0 +1,1 @@
+$('#watchlist_form_<%= @movie.id %>').html("<%= escape_javascript(render('movies/remove_from_watchlist', movie:@movie)) %>");

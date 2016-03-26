@@ -1,5 +1,7 @@
+<div id="watchlist_form_<%= movie.id %>">
 <% if current_user.movies_to_watch.include?(movie) %>
   <%= render 'movies/remove_from_watchlist', movie:movie %>
 <% else %>
   <%= render 'movies/add_to_watchlist', movie:movie %>
 <% end %>
+</div>
