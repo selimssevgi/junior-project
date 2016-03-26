@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'watchedlists/index'
+
   # first form
   # root 'static_pages#home'
   # get 'static_pages/help'
@@ -27,5 +29,7 @@ Rails.application.routes.draw do
 
   resources :movies    # only: [:index, :show]
   resources :watchlists, only: [:create, :destroy]
+  resources :watchedlists, only: [:create, :destroy]
   get    'my_watchlist'   => 'watchlists#index'
+  get    'watched_movies'   => 'watchedlists#index'
 end

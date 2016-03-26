@@ -1,0 +1,2 @@
+module WatchedlistsHelper
+end

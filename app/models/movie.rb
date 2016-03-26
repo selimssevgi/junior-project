@@ -31,4 +31,7 @@ class Movie < ActiveRecord::Base
 
   has_many   :watchlists
   has_many   :users, through: :watchlists
+
+  has_many   :watchedlists
+  has_many   :watched_list_users, through: :watchedlists
 end

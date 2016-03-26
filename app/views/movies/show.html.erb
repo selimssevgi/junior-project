@@ -40,9 +40,8 @@
         <% @movie.genres.each do |genre| %>
           <span class="tag"><%= genre.genre %></span>
         <% end %>
-        <p>
-          <%= render 'watchlist_form', movie:@movie if logged_in? %> 
-        </p>
+        <p> <%= render 'watchlist_form', movie:@movie if logged_in? %> </p>
+        <p> <%= render 'watchedlist_form', movie:@movie if logged_in? %> </p>
       </div> <!-- end column1 -->
 
       <div class="column2">

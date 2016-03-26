@@ -4,6 +4,11 @@ class User < ActiveRecord::Base
                                dependent:   :destroy
   has_many   :movies_to_watch, through: :watchlist_items, source: :movie
 
+  has_many   :watchedlist_items, class_name:  "Watchedlist",
+                               foreign_key: "user_id",
+                               dependent:   :destroy
+  has_many   :watched_movies, through: :watchedlist_items, source: :movie
+
   attr_accessor :remember_token
   before_save { email.downcase! }
 

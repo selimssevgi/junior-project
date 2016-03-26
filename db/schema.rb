@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160321235544) do
+ActiveRecord::Schema.define(version: 20160326131132) do
 
   create_table "casts", force: :cascade do |t|
     t.integer  "movie_id",   limit: 4
@@ -122,6 +122,16 @@ ActiveRecord::Schema.define(version: 20160321235544) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  create_table "watchedlists", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "movie_id",   limit: 4
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "watchedlists", ["movie_id"], name: "index_watchedlists_on_movie_id", using: :btree
+  add_index "watchedlists", ["user_id"], name: "index_watchedlists_on_user_id", using: :btree
+
   create_table "watchlists", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.integer  "movie_id",   limit: 4
@@ -142,6 +152,8 @@ ActiveRecord::Schema.define(version: 20160321235544) do
   add_foreign_key "language_movies", "languages"
   add_foreign_key "language_movies", "movies"
   add_foreign_key "movies", "rateds"
+  add_foreign_key "watchedlists", "movies"
+  add_foreign_key "watchedlists", "users"
   add_foreign_key "watchlists", "movies"
   add_foreign_key "watchlists", "users"
 end
