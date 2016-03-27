@@ -1,4 +1,7 @@
 class User < ActiveRecord::Base
+  has_many   :ratings 
+  has_many   :rated_movies, through: :ratings, source: :movie
+
   has_many   :watchlist_items, class_name:  "Watchlist",
                                foreign_key: "user_id",
                                dependent:   :destroy
@@ -38,6 +41,12 @@ class User < ActiveRecord::Base
   # returns a random token
   def User.new_token
     SecureRandom.urlsafe_base64
+  end
+
+  def get_rate_for(movie)
+    Rating.uncached do
+      @rating = Rating.where(user_id: id, movie_id: movie.id).first
+    end
   end
 
   def remember

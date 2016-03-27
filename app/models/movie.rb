@@ -34,4 +34,10 @@ class Movie < ActiveRecord::Base
 
   has_many   :watchedlists
   has_many   :watched_list_users, through: :watchedlists
+
+  has_many   :ratings
+
+  def averate_rating
+    ratings.sum(:rate) / ratings.size
+  end
 end

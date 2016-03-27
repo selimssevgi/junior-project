@@ -38,7 +38,7 @@ a:hover {
 }
 
 .hero {
-  height: 342px;  
+  height: 382px;  
   margin:0;
   position: relative;
   overflow: hidden;
@@ -108,20 +108,38 @@ a:hover {
     margin-bottom: 15px;
   }
 
+  .title3 {    
+    color: #C7C1BA;
+    font-size: 18px;    
+    font-weight: 300;
+    margin-bottom: 15px;
+  }
 
-  .likes {
+  .imdb {
     margin-left: 24px;
   }
 
 
-  .likes:before {
+  .imdb:before {
     // content: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/icon_like.png");
-    content: url("http://ia.media-imdb.com/images/G/01/imdb/images/plugins/imdb_46x22-2264473254._CB306318085_.png");
+    // content: url("http://ia.media-imdb.com/images/G/01/imdb/images/plugins/imdb_46x22-2264473254._CB306318085_.png");
+    content: url("http://www.250films.net/images/icons/logos/imdb.png");
     position: relative;
     top: 2px;
     padding-right: 7px;
   }
 
+  .metascore {
+    margin-left: 24px;
+  }
+
+
+  .metascore:before {
+    content: url("http://kayqer.am/images/favicons/1312.png");
+    position: relative;
+    top: 2px;
+    padding-right: 7px;
+  }
 }
 
 .description {
@@ -194,6 +212,15 @@ fieldset, label { margin: 0; padding: 0; }
 
 .rating > input { display: none; } 
 .rating > label:before { 
+  margin: 5px;
+  margin-top: 0;
+  font-size: 1.5em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.star:before {
   margin: 5px;
   margin-top: 0;
   font-size: 1em;

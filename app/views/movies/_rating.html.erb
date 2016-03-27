@@ -1,0 +1,35 @@
+<div id="rating_form">
+  <div class="title3">
+    <span class="star"><%= @movie.averate_rating %></span>
+
+    <a href="http://www.imdb.com/title/<%= @movie.imdb_id %>" target="_blank">
+      <span class="imdb"><%= @movie.imdb_rating %> (<%= @movie.imdb_votes %>)</span>
+    </a>
+
+    <span class="metascore"><%= @movie.metascore %></span>
+  </div>
+<% if logged_in? %>
+  <%# <% if current_user.rated_movies.include?(movie) %>
+    <% unless current_user.get_rate_for(movie).nil? %>
+    <%= "You rated #{current_user.get_rate_for(movie).rate}" %>
+  <% else %>
+  <fieldset class="rating">
+    <input type="hidden" name="movie_id" value="<%= movie.id %>">
+    <% (10.downto(1)).each do |rate| %>
+      <input type="radio" id="star<%= rate %>" name="rate" value="<%= rate %>" />
+      <label class = "full" for="star<%= rate %>" title="<%= rate %> stars"></label>
+    <% end %>
+  <!--   <input type="radio" id="star10" name="rate" value="10" /><label class = "full" for="star10" title="Perfect &#45; 10 stars"></label> -->
+  <!--   <input type="radio" id="star9" name="rate" value="9" /><label class = "full" for="star9" title="Excellent &#45; 9 stars"></label> -->
+  <!--   <input type="radio" id="star8" name="rate" value="8" /><label class = "full" for="star8" title="Awesome &#45; 8 stars"></label> -->
+  <!--   <input type="radio" id="star7" name="rate" value="7" /><label class = "full" for="star7" title="Very Good  &#45; 7 stars"></label> -->
+  <!--   <input type="radio" id="star6" name="rate" value="6" /><label class = "full" for="star6" title="Good &#45; 6 star"></label> -->
+  <!--   <input type="radio" id="star5" name="rate" value="5" /><label class = "full" for="star5" title="Kinda Good &#45; 5 stars"></label> -->
+  <!--   <input type="radio" id="star4" name="rate" value="4" /><label class = "full" for="star4" title="Acceptable &#45; 4 stars"></label> -->
+  <!--   <input type="radio" id="star3" name="rate" value="3" /><label class = "full" for="star3" title="Meh &#45; 3 stars"></label> -->
+  <!--   <input type="radio" id="star2" name="rate" value="2" /><label class = "full" for="star2" title="Kinda bad &#45; 2 stars"></label> -->
+  <!--   <input type="radio" id="star1" name="rate" value="1" /><label class = "full" for="star1" title="Sucks big time &#45; 1 star"></label> -->
+  </fieldset>
+<% end %>
+<% end %>
+</div>

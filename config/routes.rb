@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   resources :movies    # only: [:index, :show]
   resources :watchlists, only: [:create, :destroy]
   resources :watchedlists, only: [:create, :destroy]
+  resources :ratings, only: [:create]
   get    'my_watchlist'   => 'watchlists#index'
   get    'watched_movies'   => 'watchedlists#index'
 end
