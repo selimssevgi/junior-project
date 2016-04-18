@@ -1,12 +1,15 @@
 <div id="rating_form">
   <div class="title3">
-    <span class="star"><%= @movie.averate_rating %></span>
+    <span class="star">
+      <%= @movie.averate_rating != "NaN" ? "#{@movie.averate_rating}/10" : "not rated" %>
+      (<%= get_comma_version @movie.ratings.count %>)
+    </span>
 
     <a href="http://www.imdb.com/title/<%= @movie.imdb_id %>" target="_blank">
-      <span class="imdb"><%= @movie.imdb_rating %> (<%= @movie.imdb_votes %>)</span>
+      <span class="imdb"><%= @movie.imdb_rating %>/10 (<%= get_comma_version @movie.imdb_votes %>)</span>
     </a>
 
-    <span class="metascore"><%= @movie.metascore %></span>
+    <span class="metascore"><%= @movie.metascore %>/100</span>
   </div>
 <% if logged_in? %>
   <%# <% if current_user.rated_movies.include?(movie) %>

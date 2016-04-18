@@ -9,4 +9,21 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
+
+  def get_comma_version(num)
+    return if num.size < 4
+    arr_num = num.to_s.split('')
+
+    index = arr_num.size % 3
+    if index == 0
+      index += 3
+    end
+
+    while index < arr_num.size
+      arr_num.insert(index, ',')
+      index += 4 # 3+1 for added comma
+    end
+
+    arr_num.join('')
+  end
 end

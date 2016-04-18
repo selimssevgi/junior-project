@@ -11,4 +11,4 @@ X use ajax calls while adding/removing movies to list
 * Fix imdb votes number, put dots or commas
 * 3.5/10 (10) amr rating system
 * add user rated movies page
-
+* add stats like 'has in his favorite list' or 'watches list' for each movie

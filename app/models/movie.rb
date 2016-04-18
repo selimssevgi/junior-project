@@ -38,6 +38,7 @@ class Movie < ActiveRecord::Base
   has_many   :ratings
 
   def averate_rating
-    ratings.sum(:rate) / ratings.size
+    '%.01f' % (ratings.sum(:rate) / ratings.size)
+    
   end
 end
