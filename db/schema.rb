@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160326193119) do
+ActiveRecord::Schema.define(version: 20160419220405) do
 
   create_table "casts", force: :cascade do |t|
     t.integer  "movie_id",   limit: 4
@@ -119,6 +119,32 @@ ActiveRecord::Schema.define(version: 20160326193119) do
     t.string   "role_type",  limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string   "title",         limit: 255
+    t.integer  "min_year",      limit: 4
+    t.integer  "max_year",      limit: 4
+    t.integer  "min_runtime",   limit: 4
+    t.integer  "max_runtime",   limit: 4
+    t.string   "keywords",      limit: 255
+    t.string   "awards",        limit: 255
+    t.integer  "min_metascore", limit: 4
+    t.integer  "max_metascore", limit: 4
+    t.decimal  "min_irating",               precision: 10
+    t.decimal  "max_irating",               precision: 10
+    t.integer  "min_ivotes",    limit: 4
+    t.integer  "max_ivotes",    limit: 4
+    t.string   "imdb_id",       limit: 255
+    t.integer  "rated_id",      limit: 4
+    t.integer  "genre_id",      limit: 4
+    t.integer  "language_id",   limit: 4
+    t.integer  "director_id",   limit: 4
+    t.integer  "writer_id",     limit: 4
+    t.integer  "country_id",    limit: 4
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.integer  "actor_id",      limit: 4
   end
 
   create_table "users", force: :cascade do |t|

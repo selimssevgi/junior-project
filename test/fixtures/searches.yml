@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  min_year: 1
+  max_year: 1
+  min_runtime: 1
+  max_runtime: 1
+  keywords: MyString
+  awards: MyString
+  min_metascore: 1
+  max_metascore: 1
+  min_irating: 9.99
+  max_irating: 9.99
+  min_ivotes: 1
+  max_ivotes: 1
+  imdb_id: MyString
+  rated_id: 1
+  genre_id: 1
+  language_id: 1
+  director_id: 1
+  writer_id: 1
+  country_id: 1
+
+two:
+  title: MyString
+  min_year: 1
+  max_year: 1
+  min_runtime: 1
+  max_runtime: 1
+  keywords: MyString
+  awards: MyString
+  min_metascore: 1
+  max_metascore: 1
+  min_irating: 9.99
+  max_irating: 9.99
+  min_ivotes: 1
+  max_ivotes: 1
+  imdb_id: MyString
+  rated_id: 1
+  genre_id: 1
+  language_id: 1
+  director_id: 1
+  writer_id: 1
+  country_id: 1

@@ -1,0 +1,87 @@
+<h1>Advanced Search</h1>
+
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <%= form_for(@search) do |f| %>
+
+      <div class="row">
+        <div class="col-xs-6">
+          <%= f.text_field :title, class: 'form-control', placeholder: "Movie Title" %>
+        </div>
+
+        <div class="col-xs-6">
+          <%= f.text_field :imdb_id, class: 'form-control', placeholder: "IMDB ID" %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3">
+          <%= f.text_field :min_year, class: 'form-control', placeholder: "Min Year" %>
+        </div>
+        <div class="col-xs-3">
+          <%= f.text_field :max_year, class: 'form-control', placeholder: "Max Year" %>
+        </div>
+        <div class="col-xs-3">
+          <%= f.text_field :min_runtime, class: 'form-control', placeholder: "Min Runtime" %>
+        </div>
+        <div class="col-xs-3">
+          <%= f.text_field :max_runtime, class: 'form-control', placeholder: "Max Runtime" %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3">
+          <%= f.text_field :min_irating, class: 'form-control', placeholder: "min imdb rating" %>
+        </div>
+        <div class="col-xs-3">
+          <%= f.text_field :max_irating, class: 'form-control', placeholder: "max imdb rating" %>
+        </div>
+        <div class="col-xs-3">
+          <%= f.text_field :min_metascore, class: 'form-control', placeholder: "Min Metascore" %>
+        </div>
+        <div class="col-xs-3">
+          <%= f.text_field :max_metascore, class: 'form-control', placeholder: "Max Metascore" %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3">
+          <%= f.text_field :director_id, class: 'form-control', placeholder: "Director Name" %>
+        </div>
+        <div class="col-xs-3">
+          <%= f.text_field :writer_id, class: 'form-control', placeholder: "Writer Name" %>
+        </div>
+        <div class="col-xs-3">
+          <%= f.text_field :actor_id, class: 'form-control', placeholder: "Actor Name" %>
+        </div>
+        <div class="col-xs-3">
+          <%= f.text_field :keywords, class: 'form-control', placeholder: "Keywords" %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-3">
+          <%= f.label :genre_id %>
+          <%= f.collection_select :genre_id, Genre.order(:genre), :id, :genre, include_blank: true, class: 'c-select' %>
+        </div>
+
+        <div class="col-xs-3 c-select">
+          <%= f.label :language_id %>
+          <%= f.collection_select :language_id, Language.order(:language), :id, :language, include_blank: true, class: 'form-control' %>
+        </div>
+
+        <div class="col-xs-3">
+          <%= f.label :country_id %>
+          <%= f.collection_select :country_id, Country.order(:country_name), :id, :country_name, include_blank: true, class: 'form-control' %>
+        </div>
+
+        <div class="col-xs-3">
+          <%= f.label :rated_id %>
+          <%= f.collection_select :genre_id, Rated.order(:rated), :id, :rated, include_blank: true, class: 'form-control' %>
+        </div>
+      </div>
+
+      <%= f.submit "Search", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

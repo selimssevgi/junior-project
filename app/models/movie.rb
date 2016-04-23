@@ -10,15 +10,6 @@ class Movie < ActiveRecord::Base
 
   has_many   :actors,    -> { where "role_id = 3" }, through: :casts,
                                                      source: :person
-
-  # has_many   :directings
-  # has_many   :directors, through: :directings
-  #
-  # has_many   :writings
-  # has_many   :writers, through: :writings
-  #
-  # has_many   :actings
-  # has_many   :actors, through: :actings
   
   has_many   :genremovies
   has_many   :genres, through: :genremovies
@@ -39,6 +30,13 @@ class Movie < ActiveRecord::Base
 
   def averate_rating
     '%.01f' % (ratings.sum(:rate) / ratings.size)
-    
+  end
+
+  def in_watchlist_count
+    Watchlist.where("movie_id = ?", id).count
+  end
+
+  def in_watchedlist_count
+    Watchedlist.where("movie_id = ?", id).count
   end
 end
