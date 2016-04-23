@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fmovie: 1
+  smovie: 1
+  similarity: 
+
+two:
+  fmovie: 1
+  smovie: 1
+  similarity: 

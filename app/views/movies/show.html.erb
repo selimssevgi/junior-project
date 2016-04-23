@@ -89,3 +89,8 @@
 
   </div> <!-- end container -->
 </div> <!-- end movie-card -->
+
+
+<h1> Similar Movies </h1>
+# paginate on arrays, config/initializers
+<%= render 'movies', obj: @movie.get_similar_movies.paginate(page: 1, per_page: 4) %>

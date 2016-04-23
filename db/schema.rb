@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160419220405) do
+ActiveRecord::Schema.define(version: 20160423131355) do
 
   create_table "casts", force: :cascade do |t|
     t.integer  "movie_id",   limit: 4
@@ -71,6 +71,14 @@ ActiveRecord::Schema.define(version: 20160419220405) do
     t.string   "language",   limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "movie_similarities", force: :cascade do |t|
+    t.integer  "fmovie",     limit: 4
+    t.integer  "smovie",     limit: 4
+    t.decimal  "similarity",           precision: 64, scale: 12, default: 0.0
+    t.datetime "created_at",                                                   null: false
+    t.datetime "updated_at",                                                   null: false
   end
 
   create_table "movies", force: :cascade do |t|

@@ -39,4 +39,19 @@ class Movie < ActiveRecord::Base
   def in_watchedlist_count
     Watchedlist.where("movie_id = ?", id).count
   end
+
+  def get_similar_movies
+    movies_pair = MovieSimilarity.where("fmovie = ? OR smovie = ?", id, id)
+    movies_pair = movies_pair.order("similarity DESC").take(4)
+
+    similar_movies = []
+    movies_pair.each do |pair|
+      if pair.fmovie != id
+        similar_movies << Movie.find(pair.fmovie)
+      else
+        similar_movies << Movie.find(pair.smovie)
+      end
+    end
+    return similar_movies 
+  end
 end
