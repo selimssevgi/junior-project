@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
                                dependent:   :destroy
   has_many   :watched_movies, through: :watchedlist_items, source: :movie
 
+  has_many   :comments
+
   attr_accessor :remember_token
   before_save { email.downcase! }
 

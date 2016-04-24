@@ -1,0 +1,10 @@
+<%= form_for [@movie, Comment.new], :remote => true do |f| %>
+  <div class="row">
+    <div class="col-sm-12">
+      <%= f.text_area :comment, rows:6, cols:60, class: "form-control col-lg-8", placeholder: "Write a comment here..." %>
+      <%= f.hidden_field :movie_id, :value => @movie.id %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <%= f.submit "Leave Comment", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

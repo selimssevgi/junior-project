@@ -1,0 +1,6 @@
+<% if @comments.any? %>
+  <%= render @comments %>
+  <%= will_paginate @comments %>
+<% else %>
+  <p id="no-comment">There is no comment yet for this movie! </p>
+<% end %>

@@ -14,6 +14,8 @@ class Movie < ActiveRecord::Base
   has_many   :genremovies
   has_many   :genres, through: :genremovies
 
+  has_many   :comments
+
   has_many   :language_movies
   has_many   :languages, through: :language_movies 
 

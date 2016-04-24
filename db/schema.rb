@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160423131355) do
+ActiveRecord::Schema.define(version: 20160424095550) do
 
   create_table "casts", force: :cascade do |t|
     t.integer  "movie_id",   limit: 4
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 20160423131355) do
   add_index "casts", ["movie_id"], name: "index_casts_on_movie_id", using: :btree
   add_index "casts", ["person_id"], name: "index_casts_on_person_id", using: :btree
   add_index "casts", ["role_id"], name: "index_casts_on_role_id", using: :btree
+
+  create_table "comments", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.integer  "movie_id",   limit: 4
+    t.text     "comment",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "comments", ["movie_id"], name: "index_comments_on_movie_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "countries", force: :cascade do |t|
     t.string   "country_name", limit: 255
@@ -190,6 +201,8 @@ ActiveRecord::Schema.define(version: 20160423131355) do
   add_foreign_key "casts", "movies"
   add_foreign_key "casts", "people"
   add_foreign_key "casts", "roles"
+  add_foreign_key "comments", "movies"
+  add_foreign_key "comments", "users"
   add_foreign_key "country_movies", "countries"
   add_foreign_key "country_movies", "movies"
   add_foreign_key "genremovies", "genres"

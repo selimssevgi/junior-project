@@ -1,7 +1,7 @@
 <div id="rating_form">
   <div class="title3">
     <span class="star">
-      <%= @movie.averate_rating != "NaN" ? "#{@movie.averate_rating}/10" : "not rated" %>
+      <%= @movie.averate_rating != "NaN" ? "#{@movie.averate_rating}/10" : "0.0" %>
       (<%= get_comma_version @movie.ratings.count %>)
     </span>
 

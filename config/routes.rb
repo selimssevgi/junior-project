@@ -29,6 +29,9 @@ Rails.application.routes.draw do
 
   resources :searches
   resources :movies    # only: [:index, :show]
+  resources :movies do 
+    resources :comments
+  end
   resources :watchlists, only: [:create, :destroy]
   resources :watchedlists, only: [:create, :destroy]
   resources :ratings, only: [:create]

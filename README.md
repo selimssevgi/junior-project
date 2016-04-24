@@ -19,6 +19,7 @@
   find similar movies. also show random 4 movies
 * navbar, movie show, and movie pin are not mobile compatiable
 * add comment functionality
+* when logging in to leave comment, redirect user back to same page!!
 
 X add searching capabilities
 X add stats like 'has in his favorite list' or 'watches list' for each movie
