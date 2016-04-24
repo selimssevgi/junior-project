@@ -15,6 +15,8 @@
 * create a task to delete entries from a search table
 * Improve search module
 * improve movie similarities
+* pull movie from db and check if it has at least 10 similar movies, if not
+  find similar movies. also show random 4 movies
 * navbar, movie show, and movie pin are not mobile compatiable
 * add comment functionality
 
