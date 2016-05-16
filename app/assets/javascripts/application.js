@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require selectize
 //= require turbolinks
 //= require jquery.turbolinks
 //= require_tree .
@@ -36,5 +37,12 @@ $(document).ready(function(){
                 });
             }
         });
+});
+
+$(document).ready(function(){
+  $('#search_genre_id').selectize();
+  $('#search_language_id').selectize();
+  $('#search_country_id').selectize();
+  $('#search_rated_id').selectize();
 });
 

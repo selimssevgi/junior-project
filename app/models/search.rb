@@ -6,10 +6,22 @@ class Search < ActiveRecord::Base
   private
     def find_movies
       movies = Movie.order(:title)
+
       if imdb_id.present?
         movies = movies.where(imdb_id: imdb_id)
         return movies
       end
+
+      if genre_id.present?
+        genre    = Genre.find(genre_id)       
+        movies = genre.movies
+      end
+
+      if language_id.present?
+        language = Language.find(language_id)       
+        movies = language.movies
+      end
+
 
       movies = movies.where("title like ?", "%#{title}%") if title.present?
       movies = movies.where("year >= ?", min_year) if min_year.present? and min_year > 1900

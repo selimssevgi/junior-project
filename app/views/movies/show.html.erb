@@ -3,13 +3,19 @@
     <a href="#"><img src="<%= @movie.poster %>" alt="cover" class="cover" /></a>
     <div class="hero">
       <div class="details">
+          <% if @movie.title.length > 15 %>
+            <div class="title-fit">
+            <% else %> 
         <div class="title1">
+            <% end %> 
           <%= @movie.title %> <span><%= @movie.rated.rated %></span>
         </div>
 
         <div class="title2">
           <p>
-          <%= @movie.released %> | <%= @movie.runtime %> min | <%= join_countries(@movie.countries) %>
+          <%= convert_min @movie.runtime %> | 
+          <%= join_genres(@movie.genres) %> | 
+          <%= @movie.released %>(<%= join_countries(@movie.countries) %>)
           </p>
         </div>    
         
@@ -21,9 +27,9 @@
     <div class="description">
 
       <div class="column1">
-        <% @movie.genres.each do |genre| %>
-          <span class="tag"><%= genre.genre %></span>
-        <% end %>
+        <%# <% @movie.genres.each do |genre| %>
+        <%#   <span class="tag"><%= genre.genre %></span>
+        <%# <% end %>
         <p> <%= render 'watchlist_form', movie:@movie if logged_in? %> </p>
         <p> <%= render 'watchedlist_form', movie:@movie if logged_in? %> </p>
 

@@ -7,6 +7,15 @@
   <%= movie.year %> (<%= movie.countries.first.country_name %>) ,
   <%= movie.runtime %> min, <%= movie.rated.rated %>
   <hr/>
+  <% if logged_in? %>
+    <%# <% if current_user.rated_movies.include?(movie) %>
+      <% unless current_user.get_rate_for(movie).nil? %>
+        <%= "You rated #{current_user.get_rate_for(movie).rate}" %>
+    <% else %>
+      <%= "IMDB Rate : #{movie.imdb_rating} "%>
+    <% end %>
+    <% end %>
+  <hr/>
   <p>
   <%= truncate(movie.plot, length: 150) %>
   <%= link_to "read more", movie %>

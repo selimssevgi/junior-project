@@ -47,6 +47,7 @@
       <div class="row">
         <div class="col-xs-3">
           <%= f.text_field :director_id, class: 'form-control', placeholder: "Director Name" %>
+          <%# <%= f.collection_select :director_id, Genre.order(:genre), :id, :genre, include_blank: true, class: 'form-control'  %>
         </div>
         <div class="col-xs-3">
           <%= f.text_field :writer_id, class: 'form-control', placeholder: "Writer Name" %>
@@ -62,7 +63,7 @@
       <div class="row">
         <div class="col-xs-3">
           <%= f.label :genre_id %>
-          <%= f.collection_select :genre_id, Genre.order(:genre), :id, :genre, include_blank: true, class: 'c-select' %>
+          <%= f.collection_select :genre_id, Genre.order(:genre), :id, :genre, include_blank: true, class: 'form-control'  %>
         </div>
 
         <div class="col-xs-3 c-select">
@@ -72,12 +73,12 @@
 
         <div class="col-xs-3">
           <%= f.label :country_id %>
-          <%= f.collection_select :country_id, Country.order(:country_name), :id, :country_name, include_blank: true, class: 'form-control' %>
+          <%= f.collection_select :country_id, Country.order(:country_name), :id, :country_name, include_blank: true, class: 'form-control', placeholder: "Select a country" %>
         </div>
 
         <div class="col-xs-3">
           <%= f.label :rated_id %>
-          <%= f.collection_select :genre_id, Rated.order(:rated), :id, :rated, include_blank: true, class: 'form-control' %>
+          <%= f.collection_select :rated_id, Rated.order(:rated), :id, :rated, include_blank: true, class: 'form-control' %>
         </div>
       </div>
 
