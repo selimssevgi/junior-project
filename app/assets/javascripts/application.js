@@ -28,7 +28,7 @@ $(document).ready(function(){
             if (selected.length > 0) {
                 rate = selected.val();
                 movie_id = selected2.val();
-                alert(rate + movie_id);
+                // alert(rate + movie_id);
 
                 $.ajax({
                   url: '/ratings/',
