@@ -1,5 +1,3 @@
-
 <%= render 'form' %>
-
-<h1> Search Results </h1>
+<%= render 'shared/title', title: "Search Results" %>
 <%= render 'movies/movies', obj: @search.movies.paginate(page: params[:page], per_page: 20) %>

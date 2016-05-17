@@ -10,14 +10,9 @@
 <!--     </section> -->
 <!--   </aside> -->
 <!-- </div> -->
-
-<div class="panel panel-default">
-  <div class="panel-heading">Statistic of <%= @user.name %> | <%= @user.email %> | <%= @user.created_at %></div>
-  <div class="panel-body">
+<%= render 'shared/title', title: "#{@user.name}'s Profile Page" %>
   <ul class="list-group">
     <li class="list-group-item"><span class="badge">12</span> Movies in the Watchlist</li>
     <li class="list-group-item"><span class="badge">5</span> Movies in the WatchedList</li> 
     <li class="list-group-item"><span class="badge">3</span> Rated Movies</li> 
   </ul>
-  </div>
-</div>

@@ -1,5 +1,4 @@
-<h1>Advanced Search</h1>
-
+<%= render 'shared/title', title: "Advanced Search" %>
 <div class="row">
   <div class="col-md-10 col-md-offset-1">
     <%= form_for(@search) do |f| %>
@@ -81,8 +80,9 @@
           <%= f.collection_select :rated_id, Rated.order(:rated), :id, :rated, include_blank: true, class: 'form-control' %>
         </div>
       </div>
-
+      <hr>
       <%= f.submit "Search", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
+

@@ -7,21 +7,14 @@
   <%= movie.year %> (<%= movie.countries.first.country_name %>) ,
   <%= movie.runtime %> min, <%= movie.rated.rated %>
   <hr/>
+  <%= "IMDB : #{movie.imdb_rating} "%>
   <% if logged_in? %>
-    <%# <% if current_user.rated_movies.include?(movie) %>
-      <% unless current_user.get_rate_for(movie).nil? %>
-        <%= "You rated #{current_user.get_rate_for(movie).rate}" %>
-    <% else %>
-      <%= "IMDB Rate : #{movie.imdb_rating} "%>
+    <% unless current_user.get_rate_for(movie).nil? %>
+      <%= ", Your rate : #{current_user.get_rate_for(movie).rate}" %>
     <% end %>
-    <% end %>
+    <hr/>
+  <%= render 'movies/watchlist_form', movie:movie %>
   <hr/>
-  <p>
-  <%# <%= truncate(movie.plot, length: 150) %>
-  <%# <%= link_to "read more", movie %>
-  </p>
-  <hr/>
-  <%= render 'movies/watchlist_form', movie:movie if logged_in? %>
-  <hr/>
-  <%= render 'movies/watchedlist_form', movie:movie if logged_in? %>
+  <%= render 'movies/watchedlist_form', movie:movie %>
+  <% end %>
 </div>
