@@ -1,7 +1,7 @@
 // Place all the styles related to the movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+@import url(//fonts.googleapis.com/css?family=Lato:400,300,700);
 
 @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 
@@ -143,7 +143,7 @@ a:hover {
   .imdb:before {
     // content: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/icon_like.png");
     // content: url("http://ia.media-imdb.com/images/G/01/imdb/images/plugins/imdb_46x22-2264473254._CB306318085_.png");
-    content: url("http://www.250films.net/images/icons/logos/imdb.png");
+    content: url("//www.250films.net/images/icons/logos/imdb.png");
     position: relative;
     top: 2px;
     padding-right: 7px;
@@ -155,7 +155,7 @@ a:hover {
 
 
   .metascore:before {
-    content: url("http://kayqer.am/images/favicons/1312.png");
+    content: url("//kayqer.am/images/favicons/1312.png");
     position: relative;
     top: 2px;
     padding-right: 7px;
