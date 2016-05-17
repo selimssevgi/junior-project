@@ -97,15 +97,10 @@
 </div> <!-- end movie-card -->
 
 
-<hr>
-<h3> Similar Movies </h3>
-<hr>
+<%= render 'shared/title', title: "Similar Movies" %>
 <%# paginate on arrays, config/initializers%>
 <%= render 'movies', obj: @movie.get_similar_movies.paginate(page: 1, per_page: 4) %>
-<hr>
-<h3>Comments <%= "(#{@movie.comments.count})" %> </h3> 
-<hr>
-
+<%= render 'shared/title', title: "Comments(#{@movie.comments.count})" %>
 <% if logged_in? %>
   <%= render 'comments/form', review: Comment.new(movie_id: @movie.id) %>
 <% else %>

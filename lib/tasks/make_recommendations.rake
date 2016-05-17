@@ -20,7 +20,7 @@ task :make_recommendations => :environment do
         # guess rate eger 5 den buyukse recommendation tablosuna ekle!
         if guessed_rate > 5
           # do not add multiple user id and movie id combinations
-          # consider that is possible there may be change in the change
+          # consider that is possible that it is already there, update it
           recommendation = Recommendation.where("user_id = ? AND movie_id = ?", temp_user.id, movie.id).take
           recommendation = Recommendation.new if recommendation.nil?
           recommendation.user_id      = temp_user.id
@@ -73,6 +73,10 @@ def get_possible_movies(user, top_matches)
   puts "movies user rated : #{user.rated_movies.count}"
   puts "possible movies count : #{possible_movies.length}"
   possible_movies = possible_movies - user.rated_movies 
+  possible_movies = possible_movies - user.removed_recommended_movies
+  possible_movies = possible_movies - user.recommended_movies
+  possible_movies = possible_movies - user.movies_to_watch
+  possible_movies = possible_movies - user.watched_movies
   puts "possible movies count after op: #{possible_movies.length}"
 
   return possible_movies 

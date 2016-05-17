@@ -1,0 +1,28 @@
+<%= render 'shared/title', title: "Statistics" %>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Number #</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Number of users</td>
+    <td><%= @stats_hash[:users_count] %></td>
+  </tr>
+  <tr>
+    <td>Number of movies</td>
+    <td><%= @stats_hash[:movies_count] %></td>
+  </tr>
+  <tr>
+    <td>Number of total ratings</td>
+    <td><%= @stats_hash[:ratings_count] %></td>
+  </tr>
+  <tr>
+    <td>Number of total comments</td>
+    <td><%= @stats_hash[:comments_count] %></td>
+  </tr>
+  </tbody>
+</table>

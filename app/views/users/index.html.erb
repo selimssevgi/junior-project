@@ -1,10 +1,17 @@
 <%= provide(:title, "All users") %>
-<h1> All Users </h1>
+<%= render 'shared/title', title: "All Users" %>
 
-<%= will_paginate %>
-
-<ul class="users">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Created at</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
   <%= render @users %>
-</ul>
-
+  </tbody>
+</table>
 <%= will_paginate %>

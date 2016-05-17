@@ -1,0 +1,31 @@
+<%= render 'shared/title', title: "Engine Success Rate" %>
+<% if @recommended_rated_entries.count == 0 %>
+  <%= render 'shared/warning_panel', msg: "The system does not have any rated movies from the guessed ones!" %>
+<% else %>
+  <%= render 'shared/info_panel', msg: "
+  To see how well the recommender does its jobs, we need to have some metrics.
+  For this specific reason, RMSE(Root Mean Squared Error) is used. 
+  Based on the estimated rated and user rates, the system rate is : #{@rmse}
+  " %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Movie Title</th>
+      <th>User Name</th>
+      <th>Guessed Rate</th>
+      <th>User Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @recommended_rated_entries.each do |entry| %>
+  <tr>
+    <td><%= entry.movie.title %></td>
+    <td><%= entry.user.name %></td>
+    <td><%= entry.guessed_rate %></td>
+    <td><%= entry.real_rate %></td>
+  </tr>
+<% end %>
+  </tbody>
+</table>
+<%= will_paginate @recommended_rated_entries %>
+<% end %>

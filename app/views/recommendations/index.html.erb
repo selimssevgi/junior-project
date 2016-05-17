@@ -1,4 +1,4 @@
-<h1> Recommended Movies(<%= @movies.count %>) </h1>
+<%= render 'shared/title', title: "Recommended Movies for You" %>
 <% if @movies.count == 0 %>
   <%= render 'shared/warning_panel', msg: "We could not find any recommended movies for you at the moment." %>
   <%= render 'shared/info_panel', msg: "You may interact with the system so it will know you enough to have recommendations for you. Hint: Use searching functionality and rate movies that you have already seen." %>
@@ -8,7 +8,7 @@
     <tr>
       <th>Movie Title</th>
       <th>Year</th>
-      <th>Guessed Rate</th>
+      <!-- <th>Guessed Rate</th> -->
       <th>Action</th>
     </tr>
   </thead>
@@ -17,7 +17,7 @@
     <tr id="recommendation_<%= movie.id %>">
       <td><%= link_to movie.title, movie %></td>
       <td><%= movie.year %></td>
-      <td><%= movie.get_guessed_rate(current_user) %></td>
+      <!-- <td><%= movie.get_guessed_rate(current_user) %></td> -->
       <td>
         <%= form_for(current_user.recommendations.find_by(movie_id: movie.id),
                      html: { method: :delete }, 

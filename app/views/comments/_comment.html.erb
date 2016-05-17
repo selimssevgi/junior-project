@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" id="comment_<%= comment.id %>">
   <div class="col-sm-12">
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -8,6 +8,10 @@
         <span class="text-muted">
           commented <%= time_ago_in_words(comment.created_at) %> ago
         </span>
+        <% if current_user.admin? || current_user?(comment.user) %>
+          <%= link_to "delete", comment, method: :delete, remote: true,
+            data: { confirm: "Are you sure?" } %>
+        <% end %>
       </div>
       <div class="panel-body">
         <%= comment.comment %>

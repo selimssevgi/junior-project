@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'comments/destroy'
+
   get 'recommendations/index'
 
   get 'watchedlists/index'
@@ -20,6 +22,8 @@ Rails.application.routes.draw do
   get    'help'        => 'static_pages#help'
   get    'about'       => 'static_pages#about'
   get    'contact'     => 'static_pages#contact'
+  get    'stats'       => 'static_pages#stats'
+  get    'engine_rate' => 'static_pages#engine_rate'
   
   get    'signup'      => 'users#new'  
   resources :users 
@@ -34,6 +38,7 @@ Rails.application.routes.draw do
   resources :movies do 
     resources :comments
   end
+  resources :comments
   resources :watchlists, only: [:create, :destroy]
   resources :recommendations, only: [:index, :destroy]
   resources :watchedlists, only: [:create, :destroy]

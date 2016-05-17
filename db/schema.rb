@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160517104023) do
+ActiveRecord::Schema.define(version: 20160517183923) do
 
   create_table "casts", force: :cascade do |t|
     t.integer  "movie_id",   limit: 4
@@ -146,6 +146,19 @@ ActiveRecord::Schema.define(version: 20160517104023) do
   add_index "recommendations", ["movie_id"], name: "index_recommendations_on_movie_id", using: :btree
   add_index "recommendations", ["user_id"], name: "index_recommendations_on_user_id", using: :btree
 
+  create_table "recommendeds", force: :cascade do |t|
+    t.integer  "user_id",      limit: 4
+    t.integer  "movie_id",     limit: 4
+    t.decimal  "guessed_rate",           precision: 64, scale: 12, default: 0.0
+    t.decimal  "real_rate",              precision: 64, scale: 12, default: 0.0
+    t.boolean  "rated",                                            default: false
+    t.datetime "created_at",                                                       null: false
+    t.datetime "updated_at",                                                       null: false
+  end
+
+  add_index "recommendeds", ["movie_id"], name: "index_recommendeds_on_movie_id", using: :btree
+  add_index "recommendeds", ["user_id"], name: "index_recommendeds_on_user_id", using: :btree
+
   create_table "roles", force: :cascade do |t|
     t.string   "role_type",  limit: 255
     t.datetime "created_at",             null: false
@@ -234,6 +247,8 @@ ActiveRecord::Schema.define(version: 20160517104023) do
   add_foreign_key "ratings", "users"
   add_foreign_key "recommendations", "movies"
   add_foreign_key "recommendations", "users"
+  add_foreign_key "recommendeds", "movies"
+  add_foreign_key "recommendeds", "users"
   add_foreign_key "watchedlists", "movies"
   add_foreign_key "watchedlists", "users"
   add_foreign_key "watchlists", "movies"

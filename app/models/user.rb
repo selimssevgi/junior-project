@@ -5,6 +5,9 @@ class User < ActiveRecord::Base
   has_many   :recommendations
   has_many   :recommended_movies, through: :recommendations, source: :movie
 
+  has_many   :recommendeds
+  has_many   :removed_recommended_movies, through: :recommendeds, source: :movie
+
   has_many   :watchlist_items, class_name:  "Watchlist",
                                foreign_key: "user_id",
                                dependent:   :destroy
