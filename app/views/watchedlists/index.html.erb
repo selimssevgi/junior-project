@@ -1,3 +1,8 @@
-<h1> Watched Movies </h1>
+<h1> Your Watched Movies(<%= @movies.count %>) </h1>
+<% if @movies.count == 0 %>
+  <%= render 'shared/warning_panel', msg: "You have not added any movie to your watchedlist yet." %>
+  <%= render 'shared/info_panel', msg: "Hint: Use searching functionality to find movies you have already seen." %>
+<% else %>
 <%= render 'movies/movies', obj: @movies %>
+<% end %>
 </ul>

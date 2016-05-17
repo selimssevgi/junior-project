@@ -1,11 +1,23 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
+<!-- <div class="row"> -->
+<!--   <aside class="col&#45;md&#45;4"> -->
+<!--     <section class="user_info"> -->
+<!--       <h1> -->
+<!--         <%= gravatar_for @user %> -->
+<!--         <p><%= @user.name %></p> -->
+<!--         <p><%= @user.email %></p> -->
+<!--       </h1> -->
+<!--     </section> -->
+<!--   </aside> -->
+<!-- </div> -->
+
+<div class="panel panel-default">
+  <div class="panel-heading">Statistic of <%= @user.name %> | <%= @user.email %> | <%= @user.created_at %></div>
+  <div class="panel-body">
+  <ul class="list-group">
+    <li class="list-group-item"><span class="badge">12</span> Movies in the Watchlist</li>
+    <li class="list-group-item"><span class="badge">5</span> Movies in the WatchedList</li> 
+    <li class="list-group-item"><span class="badge">3</span> Rated Movies</li> 
+  </ul>
+  </div>
 </div>

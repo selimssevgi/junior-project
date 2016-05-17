@@ -1,23 +1,34 @@
-<h1> Recommended Movies </h1>
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>Movie Title</th>
-        <th>Year</th>
-        <th>Guessed Rate</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-<% @movies.each do |movie| %>
+<h1> Recommended Movies(<%= @movies.count %>) </h1>
+<% if @movies.count == 0 %>
+  <%= render 'shared/warning_panel', msg: "We could not find any recommended movies for you at the moment." %>
+  <%= render 'shared/info_panel', msg: "You may interact with the system so it will know you enough to have recommendations for you. Hint: Use searching functionality and rate movies that you have already seen." %>
+<% else %>
+<table class="table table-hover">
+  <thead>
     <tr>
+      <th>Movie Title</th>
+      <th>Year</th>
+      <th>Guessed Rate</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @movies.each do |movie| %>
+    <tr id="recommendation_<%= movie.id %>">
       <td><%= link_to movie.title, movie %></td>
       <td><%= movie.year %></td>
       <td><%= movie.get_guessed_rate(current_user) %></td>
-      <td><%= link_to "Remove from Recommendations", recommendations_path %></td>
-    </tr>
-<% end %>
-    </tbody>
-  </table>
-<%= will_paginate @movies %>
-</ul>
+      <td>
+        <%= form_for(current_user.recommendations.find_by(movie_id: movie.id),
+                     html: { method: :delete }, 
+                     data: { confirm: "Are you sure?" },
+                     remote: true) do |f| %>
+                     <%= f.submit "Remove from Recommendations", class: "btn" %>
+                   <% end %>
+                 </td>
+               </tr>
+             <% end %>
+             </tbody>
+           </table>
+           <%= will_paginate @movies %>
+         <% end %>

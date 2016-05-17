@@ -1,3 +1,8 @@
-<h1> Movies You Have Rated </h1>
+<h1> Your Rated Movies(<%= @rated_movies.count %>) </h1>
+<% if @rated_movies.count == 0 %>
+  <%= render 'shared/warning_panel', msg: "You have not rated any movie yet." %>
+  <%= render 'shared/info_panel', msg: "Hint: Use searching functionality to find movies you have already seen and rate them." %>
+<% else %>
 <%= render 'movies/movies', obj: @rated_movies %>
+<% end %>
 </ul>
