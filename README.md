@@ -1,7 +1,6 @@
 # Ara Proje
 
 # To-Dos
-* Remove users index page
 * user can just view his own page, route to profile
 * deploy to heroku
 * learn about backing up and restore database
@@ -20,6 +19,7 @@
 * Delete users, comments, see the system variables
 * Add an admin in seeds
 
+X Remove users index page[just admin can view this page]
 X remove a movie from watchlist when added to watchedlist
   [A movie can stay in watchlist, even it was watched]
 X add user rated movies page

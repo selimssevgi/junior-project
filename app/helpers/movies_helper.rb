@@ -31,6 +31,6 @@ module MoviesHelper
     hour = min / 60
     minute = min % 60
 
-    return "#{hour}h #{minute}h"
+    return "#{hour}h #{minute}m"
   end
 end

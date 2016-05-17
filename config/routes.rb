@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'recommendations/index'
+
   get 'watchedlists/index'
 
   # first form
@@ -33,6 +35,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :watchlists, only: [:create, :destroy]
+  resources :recommendations, only: [:index, :destroy]
   resources :watchedlists, only: [:create, :destroy]
   resources :ratings, only: [:index, :create]
   get    'my_watchlist'   => 'watchlists#index'

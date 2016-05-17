@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160424095550) do
+ActiveRecord::Schema.define(version: 20160517104023) do
 
   create_table "casts", force: :cascade do |t|
     t.integer  "movie_id",   limit: 4
@@ -134,6 +134,18 @@ ActiveRecord::Schema.define(version: 20160424095550) do
   add_index "ratings", ["movie_id"], name: "index_ratings_on_movie_id", using: :btree
   add_index "ratings", ["user_id"], name: "index_ratings_on_user_id", using: :btree
 
+  create_table "recommendations", force: :cascade do |t|
+    t.integer  "user_id",      limit: 4
+    t.integer  "movie_id",     limit: 4
+    t.decimal  "guessed_rate",           precision: 64, scale: 12, default: 0.0
+    t.datetime "created_at",                                                      null: false
+    t.datetime "updated_at",                                                      null: false
+    t.boolean  "show",                                             default: true
+  end
+
+  add_index "recommendations", ["movie_id"], name: "index_recommendations_on_movie_id", using: :btree
+  add_index "recommendations", ["user_id"], name: "index_recommendations_on_user_id", using: :btree
+
   create_table "roles", force: :cascade do |t|
     t.string   "role_type",  limit: 255
     t.datetime "created_at",             null: false
@@ -164,6 +176,14 @@ ActiveRecord::Schema.define(version: 20160424095550) do
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
     t.integer  "actor_id",      limit: 4
+  end
+
+  create_table "user_similarities", force: :cascade do |t|
+    t.integer  "fuser",      limit: 4
+    t.integer  "suser",      limit: 4
+    t.decimal  "similarity",           precision: 64, scale: 12, default: 0.0
+    t.datetime "created_at",                                                   null: false
+    t.datetime "updated_at",                                                   null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -212,6 +232,8 @@ ActiveRecord::Schema.define(version: 20160424095550) do
   add_foreign_key "movies", "rateds"
   add_foreign_key "ratings", "movies"
   add_foreign_key "ratings", "users"
+  add_foreign_key "recommendations", "movies"
+  add_foreign_key "recommendations", "users"
   add_foreign_key "watchedlists", "movies"
   add_foreign_key "watchedlists", "users"
   add_foreign_key "watchlists", "movies"

@@ -1,0 +1,23 @@
+<h1> Recommended Movies </h1>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Movie Title</th>
+        <th>Year</th>
+        <th>Guessed Rate</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+<% @movies.each do |movie| %>
+    <tr>
+      <td><%= link_to movie.title, movie %></td>
+      <td><%= movie.year %></td>
+      <td><%= movie.get_guessed_rate(current_user) %></td>
+      <td><%= link_to "Remove from Recommendations", recommendations_path %></td>
+    </tr>
+<% end %>
+    </tbody>
+  </table>
+<%= will_paginate @movies %>
+</ul>

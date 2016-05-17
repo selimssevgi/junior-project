@@ -56,4 +56,10 @@ class Movie < ActiveRecord::Base
     end
     return similar_movies 
   end
+
+  def get_guessed_rate(current_user)
+    recommendation = Recommendation.where("user_id = ? and movie_id = ?", current_user.id, id).take
+    return 0.0 if recommendation.nil?
+    return '%.04f' % recommendation.guessed_rate.to_f
+  end
 end
