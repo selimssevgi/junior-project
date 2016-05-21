@@ -143,7 +143,8 @@ a:hover {
   .imdb:before {
     // content: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/icon_like.png");
     // content: url("http://ia.media-imdb.com/images/G/01/imdb/images/plugins/imdb_46x22-2264473254._CB306318085_.png");
-    content: url("//www.250films.net/images/icons/logos/imdb.png");
+    // content: url("//www.250films.net/images/icons/logos/imdb.png");
+    content: url(imdb.png);
     position: relative;
     top: 2px;
     padding-right: 7px;
@@ -155,7 +156,8 @@ a:hover {
 
 
   .metascore:before {
-    content: url("//kayqer.am/images/favicons/1312.png");
+    // content: url("//kayqer.am/images/favicons/1312.png");
+    content: url(metascore.png);
     position: relative;
     top: 2px;
     padding-right: 7px;
