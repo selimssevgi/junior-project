@@ -1,6 +1,15 @@
-task :populate_movies_table => :environment do
-  movie_file = "movies_top250.txt"
+task :populate_movies_table => :environment do |t, args|
+  # movie_file = "movies_top250.txt"
+  # movie_file = "test_movies.txt"
+
+  if ENV["FILENAME"] == nil
+    puts "USAGE: rake populate_movies_table FILENAME=name_of_the_file"
+    return
+  end
+  puts "Filename: #{ENV["FILENAME"]}"
+  movie_file = ENV["FILENAME"]
   error_file = "error_" + movie_file
+
 
   base_dir   = Rails.root + 'lib/assets/' 
   file_path  = base_dir + movie_file
@@ -29,6 +38,11 @@ task :populate_movies_table => :environment do
 end
 
 def add_movie(params)
+  tempMovie = Movie.where("imdb_id = ?", params["imdbID"]).take
+  if !tempMovie.nil?
+    puts "FOUND:#{params["Title"]},#{params["Year"]}"
+    return
+  end
     movie = Movie.new
     movie.title       = params["Title"]
     movie.year        = params["Year"]

@@ -1,0 +1,1 @@
+split -l 500 final_movies.txt final_ 
