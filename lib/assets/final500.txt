@@ -1,0 +1,556 @@
+6 Bullets,2012
+12 Rounds,2009
+Beverly Hills Cop,1984
+Another Stakeout,1993
+American Outlaws,2001
+Battle in Seattle,2007
+Astro Boy,2009
+Bangkok Dangerous,2008
+Bad Ass,2012
+Bad Company,2002
+Battle Los Angeles,2011
+A Sound of Thunder,2005
+Avengers: Age of Ultron,2015
+Badlapur,2015
+Beverly Hills Cop II,1987
+Baby,2015
+Air Force One,1997
+A Lonely Place to Die,2011
+Behind Enemy Lines,2001
+Act of Valor,2012
+Bunraku,2010
+Bronson,2008
+Cirque du Freak: The Vampire's Assistant,2009
+Blind Fury,1989
+Chennai Express,2013
+Blown Away,1994
+Chaos,2005
+Contraband,2012
+Casshern,2004
+Breakdown,1997
+Bird on a Wire,1990
+Bring Me the Head of Alfredo Garcia,1974
+Chappie,2015
+Big Momma's House,2000
+Crank,2006
+Catwoman,2004
+Christine,1983
+Coogan's Bluff,1968
+Elektra,2005
+Day of the Dead,2008
+Dracula Untold,2014
+Dilwale,2015
+Deja Vu,2006
+Dick Tracy,1990
+Edison,2005
+Escape Plan,2013
+Darkman,1990
+Death Sentence,2007
+Drop Zone,1994
+Demolition Man,1993
+3:10 to Yuma,2007
+A Bug's Life,1998
+101 Dalmatians,1996
+An American Tail: Fievel Goes West,1991
+Aliens in the Attic,2009
+Aqua Teen Hunger Force Colon Movie Film for Theaters,2007
+Alexander,2004
+Alice in Wonderland,1951
+Beowulf & Grendel,2005
+Apollo 13,1995
+A Goofy Movie,1995
+Avengers: Age of Ultron,2015
+Babe: Pig in the City,1998
+A Perfect Getaway,2009
+Beneath the Planet of the Apes,1970
+Bang Bang,2014
+Anacondas: The Hunt for the Blood Orchid,2004
+A View to a Kill,1985
+Chicken Little,2005
+Cliffhanger,1993
+Bubble Boy,2001
+Conan the Barbarian,1982
+Conan the Barbarian,2011
+Charlie's Angels,2000
+Broken Arrow,1996
+Bone Tomahawk,2015
+Cool Runnings,1993
+Curious George,2006
+Centurion,2010
+Cheaper by the Dozen 2,2005
+Alvin and the Chipmunks: The Squeakquel,2009
+A Goofy Movie,1995
+Antz,1998
+Brave,2012
+Cloudy with a Chance of Meatballs,2009
+Cool World,1992
+Final Fantasy: The Spirits Within,2001
+Flushed Away,2006
+Frankenweenie,2012
+Fantastic Mr. Fox,2009
+Horton Hears a Who!,2008
+Ice Age: The Meltdown,2006
+Jimmy Neutron: Boy Genius,2001
+Hoodwinked!,2005
+Home on the Range,2004
+Mulan,1998
+Monsters, Inc.,2001
+Peter Pan,1953
+Osmosis Jones,2001
+Open Season 2,2008
+Quest for Camelot,1998
+Rise of the Guardians,2012
+Shark Tale,2004
+Space Jam,1996
+Shrek Forever After,2010
+Stuart Little,1999
+Surf's Up,2007
+Tarzan,1999
+The Land Before Time,1988
+The Adventures of Tintin,2011
+A Day at the Races,1937
+50/50,2011
+*batteries not included,1987
+Barefoot,2014
+Bandslam,2009
+Before We Go,2014
+A Life Less Ordinary,1997
+Anywhere But Here,1999
+Baby Geniuses,1999
+Beethoven,1992
+Baby Mama,2008
+Billy Madison,1995
+Broadway Danny Rose,1984
+Cyrus,2010
+Cocoon: The Return,1988
+Cheaper by the Dozen 2,2005
+Bill & Ted's Excellent Adventure,1989
+Bull Durham,1988
+Dope,2015
+Dev D,2009
+East Is East,1999
+European Vacation,1985
+Don Jon,2013
+Go,1999
+Frankie and Johnny,1991
+Gambit,2012
+George of the Jungle,1997
+Jackass Presents: Bad Grandpa,2013
+How the Grinch Stole Christmas,2000
+I Love You, Beth Cooper,2009
+Insaat,2003
+Just Visiting,2001
+John Dies at the End,2012
+Jaane Tu... Ya Jaane Na,2008
+If Only,2004
+In Bruges,2008
+King of California,2007
+Hocus Pocus,1993
+Jack and Jill,2011
+Land of the Lost,2009
+Living in Oblivion,1995
+Mannequin,1987
+Megamind,2010
+Napoleon Dynamite,2004
+Meet the Spartans,2008
+Nick and Norah's Infinite Playlist,2008
+Meet the Robinsons,2007
+Project X,2012
+Orgazmo,1997
+Pyaar Ka Punchnama,2011
+12 Angry Men,1957
+21 Grams,2003
+2 Days in the Valley,1996
+2 Guns,2013
+...and justice for all.,1979
+48 Hrs.,1982
+21 Jump Street,2012
+15 Minutes,2001
+30 Minutes or Less,2011
+Awake,2007
+Another 48 Hrs.,1990
+Another Stakeout,1993
+Agneepath,2012
+Balls of Fury,2007
+Baazigar,1993
+An American Crime,2007
+Baby's Day Out,1994
+A Life Less Ordinary,1997
+Bad Lieutenant,1992
+Animal Factory,2000
+Basic Instinct 2,2006
+Assault on Precinct 13,2005
+Bad Ass,2012
+Arsenic and Old Lace,1944
+A Man Apart,2003
+Bang Bang You're Dead,2002
+Animal Kingdom,2010
+Amen.,2002
+Beverly Hills Cop II,1987
+Bandidas,2006
+Atlantic City,1980
+Baby,2015
+Conspiracy Theory,1997
+Blood Ties,2013
+Big Mommas: Like Father, Like Son,2011
+Catch Me If You Can,2002
+Bugsy Malone,1976
+Blue Streak,1999
+Blackhat,2015
+Chicago,2002
+Catch .44,2011
+Chaos,2005
+Cheap Thrills,2013
+Clear and Present Danger,1994
+Calvary,2014
+Big Momma's House,2000
+Big Trouble,2002
+Carandiru,2003
+Body Heat,1981
+Bitch Slap,2009
+54,1998
+99 francs,2007
+3 Days to Kill,2014
+'71,2014
+17 Again,2009
+11:14,2003
+10 Years,2011
+9 Songs,2004
+8 Mile,2002
+3 Idiots,2009
+2046,2004
+2 Days in Paris,2007
+3 Men and a Little Lady,1990
+Anadolu Kartallari,2011
+A Wednesday,2008
+Beaches,1988
+Akeelah and the Bee,2006
+Alone,2008
+About Schmidt,2002
+A Most Wanted Man,2014
+Alone,2008
+Beyond a Reasonable Doubt,2009
+American Graffiti,1973
+An Unfinished Life,2005
+All the Boys Love Mandy Lane,2006
+Ben X,2007
+Bambi,1942
+Before We Go,2014
+Beyond Borders,2003
+Anna,2013
+An American Tail: Fievel Goes West,1991
+Astro Boy,2009
+Alvin and the Chipmunks,2007
+Aile Serefi,1976
+Batman: The Movie,1966
+Beethoven,1992
+Angels in the Outfield,1994
+Cats & Dogs,2001
+Cloudy with a Chance of Meatballs,2009
+Cheaper by the Dozen 2,2005
+E.T. the Extra-Terrestrial,1982
+English Vinglish,2012
+Dumbo,1941
+Dr. Dolittle 2,2001
+Daddy Day Camp,2007
+Daddy Day Care,2003
+Hannah Montana: The Movie,2009
+Hercules in New York,1970
+Harry Potter and the Goblet of Fire,2005
+Harry Potter and the Prisoner of Azkaban,2004
+Fantasia,1940
+Harry and the Hendersons,1987
+Harry Potter and the Deathly Hallows: Part 1,2010
+Inkheart,2008
+Ice Princess,2005
+Hook,1991
+Journey to the Center of the Earth,2008
+Jingle All the Way,1996
+Igor,2008
+James and the Giant Peach,1996
+Book of Shadows: Blair Witch 2,2000
+Big,1988
+Chitty Chitty Bang Bang,1968
+Click,2006
+Child's Play,1988
+Clash of the Titans,2010
+Frequency,2000
+How High,2001
+Mighty Aphrodite,1995
+Peggy Sue Got Married,1986
+Phantasm,1979
+Star Wars: Episode VII - The Force Awakens,2015
+Teeth,2007
+The Covenant,2006
+The Nines,2007
+The Gift,2000
+The Last Unicorn,1982
+The Family Man,2000
+The Fog,1980
+The Water Horse,2007
+The Wolfman,2010
+Upside Down,2012
+6 Souls,2010
+28 Weeks Later,2007
+30 Days of Night,2007
+Abraham Lincoln: Vampire Hunter,2012
+Basket Case,1982
+April Fool's Day,1986
+Alone in the Dark,2005
+Alien: Resurrection,1997
+A Haunted House,2013
+Altered States,1980
+Bad Taste,1987
+Chernobyl Diaries,2012
+Critters,1986
+Cujo,1983
+Blood: The Last Vampire,2009
+Boogeyman,2005
+Cabin Fever,2002
+Child's Play,1988
+Carrie,2013
+Birdemic: Shock and Terror,2010
+Cold Creek Manor,2003
+Deep Rising,1998
+Dreamcatcher,2003
+Detention,2011
+Dead End,2003
+Day of the Dead,1985
+Dawn of the Dead,2004
+Deliver Us from Evil,2014
+Eight Legged Freaks,2002
+Dog Soldiers,2002
+Gremlins 2: The New Batch,1990
+Friday the 13th,1980
+Freddy vs. Jason,2003
+Exorcist II: The Heretic,1977
+Halloween II,2009
+Fright Night,2011
+Fragile,2005
+Frankenstein,1931
+Haunter,2013
+Funny Games,2007
+Halloween 4: The Return of Michael Myers,1988
+Halloween,2007
+Hellboy,2004
+Friday the 13th: A New Beginning,1985
+Inside,2007
+I Spit on Your Grave 2,2013
+Knock Knock,2015
+Jason Goes to Hell: The Final Friday,1993
+Jaws 3-D,1983
+Jason X,2001
+A Room with a View,1985
+Adventureland,2009
+Dostana,2008
+Dying Young,1991
+Drumline,2002
+Dirty Dancing: Havana Nights,2004
+Grumpier Old Men,1995
+Foreign Correspondent,1940
+Keith,2008
+How to Lose a Guy in 10 Days,2003
+Just My Luck,2006
+I Love You, Man,2009
+Little Women,1994
+Little Children,2006
+Mr. Nobody,2009
+Red River,1948
+Phenomenon,1996
+Snow Falling on Cedars,1999
+Runaway Bride,1999
+Safety Not Guaranteed,2012
+Strictly Ballroom,1992
+Serena,2014
+The Last Station,2009
+Tess,1979
+The Apartment,1960
+The Boxer,1997
+The Back-up Plan,2010
+The Fabulous Baker Boys,1989
+The Girl Next Door,2004
+The Thomas Crown Affair,1999
+The Princess Diaries 2: Royal Engagement,2004
+Tin Cup,1996
+The Perfect Man,2005
+The Proposal,2009
+What to Expect When You're Expecting,2012
+Welcome Home, Roscoe Jenkins,2008
+Wedding Crashers,2005
+28 Days Later...,2002
+Ant-Man,2015
+A.R.O.G,2008
+Battle for the Planet of the Apes,1973
+Avengers: Age of Ultron,2015
+Bad Taste,1987
+Cooties,2014
+Cyborg,1989
+Body Snatchers,1993
+Blade II,2002
+Bill & Ted's Excellent Adventure,1989
+Deep Impact,1998
+Dreamcatcher,2003
+Death Race 2000,1975
+Daybreakers,2009
+Eraserhead,1977
+Ender's Game,2013
+Fantastic Four,2005
+Fantastic Four,2015
+Godzilla,1998
+Forever Young,1992
+Godzilla,2014
+Her,2013
+Iron Man,2008
+Jumper,2008
+Jurassic World,2015
+Independence Day,1996
+Hulk,2003
+Looper,2012
+Lockout,2012
+2010,1984
+3:10 to Yuma,1957
+13 Tzameti,2005
+A Good Day to Die Hard,2013
+Assault on Precinct 13,1976
+Anonymous,2011
+Ben X,2007
+Baazigar,1993
+A Time to Kill,1996
+Anonymous,2011
+Arlington Road,1999
+A Nightmare on Elm Street 3: Dream Warriors,1987
+Apt Pupil,1998
+Airport,1970
+Bad Boys,1983
+Blood Ties,2013
+Cape Fear,1991
+Changing Lanes,2002
+Brooklyn's Finest,2009
+Children of Men,2006
+Cruising,1980
+Black Christmas,1974
+Brothers,2009
+Black Swan,2010
+Cube,1997
+Big Trouble,2002
+Club Dread,2004
+Black Rain,1989
+Coogan's Bluff,1968
+Blood Simple.,1984
+50 First Dates,2004
+120,2008
+Anadolu Kartallari,2011
+Alone,2008
+A Most Wanted Man,2014
+Alone,2008
+A.R.O.G,2008
+Ah Nerede,1975
+Azize: Bir Laleli Hikayesi,1999
+Ay Lav Yu,2010
+Ask Sana Benzer,2015
+Banker Bilo,1980
+Aile Serefi,1976
+Atla Gel Saban,1984
+Around the World in 80 Days,2004
+CM101MMXI Fundamentals,2013
+Bizim Aile,1975
+Bornova Bornova,2009
+Buffalo Soldiers,2001
+Dracula Untold,2014
+Dabbe: Bir Cin Vakasi,2012
+Dabbe: Zehr-i Cin,2014
+Eastern Promises,2007
+Davaci,1986
+Dokunmayin Sabanima,1979
+D@bbe,2006
+Esrefpasalilar,2010
+Deliha,2014
+Davaro: Son Eskiya,1981
+Hababam Sinifi Dokuz Doguruyor,1978
+Eyyvah Eyvah 3,2014
+Eyyvah Eyvah 2,2011
+Fate,2001
+From Russia with Love,1963
+Five Minarets in New York,2010
+G.O.R.A.,2004
+God's Faithful Servant: Barla,2011
+Hanzo,1975
+Gen,2006
+Eyyvah Eyvah,2010
+Half Baked,1998
+Gol Krali,1981
+Kirpi,2009
+Kahpe Bizans,2000
+Inside,2012
+Insaat,2003
+Kara Bela,2015
+Inside,2012
+Kanal-i-zasyon,2009
+Japon Isi,1987
+Inek Saban,1978
+Kanli Nigar,1981
+Inside,2012
+Korkusuz Korkak,1979
+Lawrence of Arabia,1962
+Kutsal Damacana,2007
+Lord of War,2005
+Kutsal Damacana 2: Itmen,2010
+Mandira Filozofu,2013
+Maskeli Besler: Kibris,2008
+Only Lovers Left Alive,2013
+Musallat,2007
+Maskeli Besler: Intikam Pesinde,2005
+Mustafa,2008
+Okul,2004
+Neseli Hayat,2009
+Maskeli Besler: Irak,2007
+Mediterraneo,1991
+Mommo,2009
+Milyarder,1986
+O simdi asker,2003
+Midnight Express,1978
+Murder on the Orient Express,1974
+Pirates of the Caribbean: Dead Man's Chest,2006
+Recep Ivedik 2,2009
+Postaci,1984
+Recep Ivedik 3,2010
+Propaganda,1999
+Recep Ivedik,2008
+Pardon,2005
+Ortadirek Saban,1984
+Patron Mutlu Son Istiyor,2014
+Romantik Komedi,2010
+Recep Ivedik 4,2014
+Soul Kitchen,2009
+Sosyete Saban,1985
+Sahte Kabadayi,1976
+Sabaniye,1984
+Street Kings,2008
+Selam: Bahara Yolculuk,2015
+Sabit Kanca,2013
+Sag Salim,2012
+Sakar Sakir,1977
+Salako,1974
+Saban Pabucu Yarim,1985
+Son ders,2008
+Sans kapiyi kirinca,2005
+Sekerpare,1983
+Sultan,1978
+Semum,2008
+Taken 2,2012
+The Miracle,2015
+The Messenger,2008
+Tatar Ramazan,1990
+The Messenger,2008
+Umudumuz Saban,1979
+Vavien,2009
+The Two Faces of January,2014
+Unknown,2011
+Unknown,2011
+The Water Diviner,2014
+Uzak Ihtimal,2009
+Tosun Pasa,1976
+Varyemez,1991
+Vizontele Tuuba,2004
+Zenne Dancer,2012
+Vizontele,2001
