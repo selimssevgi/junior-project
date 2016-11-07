@@ -5,7 +5,7 @@ spending too much time looking here and there. Read more on the paper.
 
 
 ## What's done in this project
-By that time I wanted to learn more about Ruby and Ruby on Rails. So I would
+At that time I wanted to learn more about Ruby and Ruby on Rails. So I would
 learn more about them while creating the project. 
 
 * I have used data provided by IMDB [at this
@@ -22,7 +22,7 @@ learn more about them while creating the project.
 * I have used heroku for demo purposes.
 
 ## Outcome
-I had been a great experience that taught me a lot about Ruby, Rails, Heroku, git,
+It had been a great experience that taught me a lot about Ruby, Rails, Heroku, git,
 MySQL and PostgreSQL, and general recommendation system.
 
 ## To-Dos
