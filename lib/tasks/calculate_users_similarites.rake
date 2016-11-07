@@ -8,7 +8,6 @@ task :calculate_users_similarites => :environment do
     start = 0
   # end
 
-  # movies = Movie.all
   users = User.order(:email)
   len = users.length
   

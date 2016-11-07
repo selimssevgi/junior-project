@@ -1,24 +1,27 @@
-# Ara Proje
+# Junior Project
+It was my junior project in the third year of studying. 
+Main idea was to help people finding movies based on their preferences without
+spending too much time looking here and there. Read more on the paper.
 
 # To-Dos
 * user can just view his own page, route to profile
-* deploy to heroku
 * learn about backing up and restore database
-* add all movies instead of just 250 list
 * show movies when clicked on a language/genre/director etc
-* create a task to delete entries from a search table
+* create a task to delete entries from search table
 * Improve search module
 * improve movie similarities, create vector of each movie
 * pull movie from db and check if it has at least 10 similar movies, if not
   find similar movies. also show random 4 movies
 * navbar, movie show, and movie pin are not mobile compatiable
 * when logging in to leave comment, redirect user back to same page!!
-* add comment edit, delete functionality
 
 ## Admin 
 * Delete users, comments, see the system variables
 * Add an admin in seeds
 
+X add comment edit, delete functionality
+X add all movies instead of just 250 list
+X deploy to heroku
 X Remove users index page[just admin can view this page]
 X remove a movie from watchlist when added to watchedlist
   [A movie can stay in watchlist, even it was watched]
