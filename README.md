@@ -3,7 +3,29 @@ It was my junior project in the third year of studying.
 Main idea was to help people finding movies based on their preferences without
 spending too much time looking here and there. Read more on the paper.
 
-# To-Dos
+
+## What's done in this project
+By that time I wanted to learn more about Ruby and Ruby on Rails. So I would
+learn more about them while creating the project. 
+
+* I have used data provided by IMDB [at this
+  location](http://www.imdb.com/interfaces)
+* In order to parse and move the data into database, I have used
+  [IMDbPY](http://imdbpy.sourceforge.net/)
+* I was just able to get release dates and movie title, so I have used [OMDb
+  API](https://www.omdbapi.com/) to populate the database with missing part.
+* I have wrote scripts in Python and Ruby to have a decent dataset.
+* I have used bootstrap, jquery and ajax call to have a more responsive
+  interface.
+* I have written some Ruby tasks to find similarities between movies and users,
+  also to implement some algorithms to improve the recommendation engine.
+* I have used heroku for demo purposes.
+
+## Outcome
+I had been a great experience that taught me a lot about Ruby, Rails, Heroku, git,
+MySQL and PostgreSQL, and general recommendation system.
+
+## To-Dos
 * user can just view his own page, route to profile
 * learn about backing up and restore database
 * show movies when clicked on a language/genre/director etc
